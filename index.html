@@ -17,19 +17,18 @@
         <img id="logo" src="./assets/logo.png" alt="logo">
         <h1>DIDLYDOO</h1>
     </header>
-    <div class="addEvent">
-        <button arial-label="Add a new event" class="add">Add an event</button>
+    <button arial-label="Add a new event" class="add">Add an event</button>
+    <form action ="//http://localhost:3000/api/events/" method="post" class="addEvent" id="myform">
         <label for="name">Name :</label>
-        <input type="text" name="name" class="input_name">
+        <input type="text" name="name" class="input_name" id="name">
+        <label for="author">Author :</label>
+        <input type="text" name="author" class="input_author" id="author">
         <label for="description">Description :</label>
-        <input type="text" name="description" class="input_description">
-        <label for="description">Author :</label>
-        <input type="text" name="author" class="input_author">
-        <label for="description">Dates :</label>
+        <textarea type="text" name="description" class="input_description" id="description">Description</textarea>
+        <label for="date1">Date 1 :</label>
         <input type="date" name="date1" id="date1">
-        <input type="date" name="date2" id="date2">
-        <input type="date" name="date3" id="date3">
-    </div>
+        <input type="submit" value="Create" />
+    </form>
     <footer>
         <div id="event__wrapper"></div><button id="test">???</button>
     </footer>
