@@ -1,3 +1,5 @@
+import editEvent from "./editEvent.js";
+
 export default function generateElement(event, id, descr, auteur, dates) {
   let wrapper = document.getElementById("event__wrapper");
 
@@ -10,6 +12,16 @@ export default function generateElement(event, id, descr, auteur, dates) {
   let cardNameText = document.createTextNode(event);
   cardName.appendChild(cardNameText);
   element.appendChild(cardName);
+
+  let deleteButton = document.createElement("button");
+  let deleteButtonText = document.createTextNode("X");
+  deleteButton.setAttribute("type", "button");
+
+  deleteButton.addEventListener("click", () => {
+    editEvent(id);
+  });
+  deleteButton.appendChild(deleteButtonText);
+  element.appendChild(deleteButton);
 
   let descrPara = document.createElement("p");
   descrPara.classList.add("card__description");
