@@ -1,6 +1,6 @@
 export default async function editEvent() {
   try {
-    await fetch("/api/events/[id]/add_dates", {
+    await fetch("http://localhost:3000/api/events/[id]/add_dates", {
       method: "PATCH",
       headers: { "Content-Type": "application-json" },
       body: {
