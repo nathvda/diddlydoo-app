@@ -1,11 +1,4 @@
-export default function generateElement(
-  event,
-  id,
-  descr,
-  auteur,
-  dates,
-  participants
-) {
+export default function generateElement(event, id, descr, auteur, dates) {
   let wrapper = document.getElementById("event__wrapper");
 
   let element = document.createElement("div");
@@ -35,29 +28,26 @@ export default function generateElement(
   titre.appendChild(titreText);
   element.appendChild(titre);
 
-  console.log(element);
-
-  for (let elem of dates) {
-    console.log(elem);
+  for (let i = 0; i < dates.length; i++) {
+    console.log(dates[i]);
     let date_box = document.createElement("div");
     let date = document.createElement("h5");
     date.classList.add("date");
-    let dateText = document.createTextNode(elem);
+    let dateText = document.createTextNode(`${dates[i].date}`);
 
     date.appendChild(dateText);
 
     date_box.appendChild(date);
     element.appendChild(date_box);
 
-    for (let elem of participants) {
-      console.log(elem);
+    for (let j = 0; j < dates[i].attendees.length; j++) {
       let attendName = document.createElement("li");
-      let attendNameText = document.createTextNode(elem);
+      let attendNameText = document.createTextNode(dates[i].attendees[j].name);
       let attend = document.createElement("input");
       attendName.appendChild(attendNameText);
       attend.setAttribute("type", "checkbox");
       element.appendChild(attendName);
-      date.appendChild(attend);
+      attendName.appendChild(attend);
     }
   }
 
