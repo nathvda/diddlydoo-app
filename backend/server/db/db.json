@@ -1,44 +1,5 @@
 [
   {
-    "id": "09403c176a55",
-    "name": "Bonjour à tous",
-    "author": "???",
-    "description": "C'est l'heure de célébrer notre réussite mes amis",
-    "dates": [
-      "2023-01-21"
-    ],
-    "created_at": "2023-01-06T09:52:21.345Z",
-    "num_modification": 10,
-    "last_modification": "2023-01-06T11:02:13.772Z",
-    "attendees": []
-  },
-  {
-    "id": "a307dfe84272",
-    "name": "Vi",
-    "author": "lmirhgmalzkrneg",
-    "description": "Description   ",
-    "dates": [
-      "2023-01-18"
-    ],
-    "created_at": "2023-01-06T11:11:10.854Z",
-    "num_modification": 0,
-    "last_modification": "2023-01-06T11:11:10.854Z",
-    "attendees": []
-  },
-  {
-    "id": "e873c38a6665",
-    "name": "hhhhh",
-    "author": "Moi",
-    "description": "Descriptionrrrrrrrrr",
-    "dates": [
-      "2023-01-18"
-    ],
-    "created_at": "2023-01-06T11:10:51.069Z",
-    "num_modification": 0,
-    "last_modification": "2023-01-06T11:10:51.069Z",
-    "attendees": []
-  },
-  {
     "id": "f5b6564b5dc4",
     "name": "My sweet 16",
     "description": "I am going to be 16, let us all party together! Help me pick a date so we can go together",

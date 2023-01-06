@@ -16,12 +16,6 @@ $lightBlue : #cacbd5;
     font-weight: $weigth;
 }
 
-
-:root {
-    --mainColor: rgb(29, 124, 219);
-    --gray: #efefef;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -55,7 +49,7 @@ body {
         font-size: 7vw;
         color: $darkBlue;
         text-align: end;
-        margin: 5% 5% 5% 0%;
+        margin: 15% 5% 0% 0%;
         height: 7vh;
         line-height: 0vh;
         text-shadow: 0.45vw 0.45vw 0px white, 
@@ -66,8 +60,8 @@ body {
 }
 
 #event__wrapper {
-    display: grid;
-    padding: 1rem;
+    display: flex;
+    flex-direction: column;
 
     .event__card {
 

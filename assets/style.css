@@ -1,9 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Kodchasan:wght@200;400;600&family=Patrick+Hand&display=swap");
-:root {
-  --mainColor: rgb(29, 124, 219);
-  --gray: #efefef;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -35,15 +30,15 @@ body {
   font-size: 7vw;
   color: #3d4251;
   text-align: end;
-  margin: 5% 5% 5% 0%;
+  margin: 15% 5% 0% 0%;
   height: 7vh;
   line-height: 0vh;
   text-shadow: 0.45vw 0.45vw 0px white, 0.9vw 0.9vw 0px #cacbd5, 1.35vw 1.35vw 0px #d35e35, 1.8vw 1.8vw 0px #666f88;
 }
 
 #event__wrapper {
-  display: grid;
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 #event__wrapper .event__card {
   background-color: #efefef;
