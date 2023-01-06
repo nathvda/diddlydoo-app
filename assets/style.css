@@ -36,6 +36,11 @@ body {
   text-shadow: 0.45vw 0.45vw 0px white, 0.9vw 0.9vw 0px #cacbd5, 1.35vw 1.35vw 0px #d35e35, 1.8vw 1.8vw 0px #666f88;
 }
 
+main .addEvent {
+  display: flex;
+  display: none;
+}
+
 #event__wrapper {
   display: flex;
   flex-direction: column;

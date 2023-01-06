@@ -59,6 +59,13 @@ body {
     }
 }
 
+main {
+    .addEvent {
+        display: flex;
+        display: none;
+    }
+}
+
 #event__wrapper {
     display: flex;
     flex-direction: column;
