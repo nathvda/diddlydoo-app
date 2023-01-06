@@ -1,10 +1,12 @@
-export default async function editElement(id) {
+export default async function editElement(id, namevalue, description, author) {
   try {
     await fetch(`http://localhost:3000/api/events/${id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        name: "I DON'T KNOW",
+        name: namevalue,
+        description: description,
+        author: author,
       }),
     })
       .then((response) => response.json())
