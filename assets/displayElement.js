@@ -6,12 +6,12 @@ import findBestPossibleDate from "./findBestPossibleDate.js";
 export default function generateElement(event, id, descr, auteur, dates) {
   const wrapper = document.getElementById("event__wrapper");
 
-  const element = document.createElement("div");
+  const element = document.createElement("section");
   element.classList.add("event__card");
   element.setAttribute("id", id);
 
-  const divHeader = document.createElement('div');
-  divHeader.classList.add('event__card__divHeader');
+  const divHeader = document.createElement("div");
+  divHeader.classList.add("event__card__divHeader");
   element.appendChild(divHeader);
 
   const imageCard = document.createElement("div");
@@ -60,6 +60,11 @@ export default function generateElement(event, id, descr, auteur, dates) {
   titre.appendChild(titreText);
   element.appendChild(titre);
 
+  const arrayAttendees = document.createElement("div");
+  arrayAttendees.classList.add("event__card__arrayAttendees");
+
+  element.appendChild(arrayAttendees);
+
   for (let i = 0; i < dates.length; i++) {
     const date_box = document.createElement("div");
     const date = document.createElement("h5");
@@ -69,7 +74,10 @@ export default function generateElement(event, id, descr, auteur, dates) {
     date.appendChild(dateText);
 
     date_box.appendChild(date);
-    element.appendChild(date_box);
+    arrayAttendees.appendChild(date_box);
+
+    const attendeeList = document.createElement("ul");
+    date_box.appendChild(attendeeList);
 
     for (let j = 0; j < dates[i].attendees.length; j++) {
       const attendName = document.createElement("li");
@@ -88,8 +96,8 @@ export default function generateElement(event, id, descr, auteur, dates) {
         attend.checked = false;
       }
       attend.classList.add("event__card__attendee");
+      attendeeList.appendChild(attendName);
 
-      element.appendChild(attendName);
       attendName.appendChild(attend);
     }
   }
@@ -100,7 +108,7 @@ export default function generateElement(event, id, descr, auteur, dates) {
   modificationButton.classList.add("event__card__button--edit");
 
   modificationButton.addEventListener("click", () => {
-    editModeToggle(id);
+    editModeToggle(id, divHeader);
   });
   modificationButton.appendChild(modificationButtonText);
   element.appendChild(modificationButton);
