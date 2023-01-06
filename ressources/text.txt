@@ -1,0 +1,7 @@
+event__card__button--edit (classe du bouton edition)
+event__card__button--delete (classe du bouton de suppression)
+event__card__description
+event__card__author
+event__card__title4
+event__card__date
+event__card__attendee
