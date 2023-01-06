@@ -66,26 +66,47 @@ main {
     flex-direction: column;
 
     .event__card {
-
-        h3 {
-            background-color: var(--mainColor);
-            color: white;
-            padding: 1rem;
+        margin: 7%;
+        border-radius: 7vw;
+        background-color: $lightBlue;
+        //border-left: 1.5vw solid;
+        //border-image: linear-gradient(to bottom, $lightBlue, $darkBlue) 0 1;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            background-color: $darkBlue;
+            width: 1vw;
+            height: 80%;
+            top: 10%;
+            left: 0%;
+            border-radius: 1vw;
         }
-
-        background-color: #efefef;
-
-        .card__description {
-            padding: 0.5rem 0.8rem;
+        &__divHeader {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
         }
-
-        .card__author {
-            padding: 0.5rem 0.8rem;
+        &__image {
+            background-image: url(./images/didlydoo-app-réseau.webp);
+            width: 10vw;
+            height: 10vw;
+            background-size: cover;
+            margin: 5%;
         }
-
-        h4 {
-            padding: 1rem;
-            color: var(--mainColor);
+        &__name {
+            @include fonts(5.5vw, 600);
+            color : $darkBlue;
+            padding-right: 10%;
+        }
+        &__author {
+            margin-left: 5%;
+        }
+        &__description {
+            margin-left: 5%;
+        }
+        &__title4 {
+            text-align: center;
         }
     }
 

@@ -10,15 +10,19 @@ export default function generateElement(event, id, descr, auteur, dates) {
   element.classList.add("event__card");
   element.setAttribute("id", id);
 
+  const divHeader = document.createElement('div');
+  divHeader.classList.add('event__card__divHeader');
+  element.appendChild(divHeader);
+
   const imageCard = document.createElement("div");
   imageCard.classList.add("event__card__image");
-  element.appendChild(imageCard);
+  divHeader.appendChild(imageCard);
 
   const cardName = document.createElement("h3");
   cardName.classList.add("event__card__name");
   const cardNameText = document.createTextNode(event);
   cardName.appendChild(cardNameText);
-  element.appendChild(cardName);
+  divHeader.appendChild(cardName);
 
   const author = document.createElement("p");
   author.classList.add("event__card__author");
