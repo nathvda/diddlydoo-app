@@ -1,4 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+//Polices
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@200;400;600&family=Patrick+Hand&display=swap');
+//font-family: 'Kodchasan', sans-serif;
+//font-family: 'Patrick Hand', cursive;
+
+//mixins
+@mixin fonts ($fontSize, $weigth) {
+    font-family: 'Kodchasan', sans-serif;
+    font-size: $fontSize;
+    font-weight: $weigth;
+}
+
 
 :root {
     --mainColor: rgb(29, 124, 219);

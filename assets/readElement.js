@@ -1,6 +1,6 @@
 import generateElement from "./displayElement.js";
 
-export default async function addElement() {
+export default async function readElement() {
   try {
     const response = await fetch("http://localhost:3000/api/events", {
       method: "GET",
