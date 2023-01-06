@@ -6,12 +6,6 @@
   list-style-type: none;
 }
 
-body {
-  font-size: 18px;
-  min-height: 100vh;
-  font-family: inter;
-}
-
 .header__images {
   display: flex;
   align-items: center;
@@ -37,7 +31,6 @@ body {
 }
 
 main .addEvent {
-  display: flex;
   display: none;
 }
 

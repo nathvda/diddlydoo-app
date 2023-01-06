@@ -23,13 +23,7 @@ $lightBlue : #cacbd5;
     list-style-type: none;
 }
 
-body {
-    font-size: 18px;
-    min-height: 100vh;
-    font-family: inter;
-
-}
-
+//mise en page du header
 .header {
     &__images {
         display: flex;
@@ -59,9 +53,10 @@ body {
     }
 }
 
+//mise en page du main
 main {
     .addEvent {
-        display: flex;
+        //display: flex;
         display: none;
     }
 }
