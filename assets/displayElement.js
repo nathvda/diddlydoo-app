@@ -1,6 +1,7 @@
 import deleteElement from "./deleteElement.js";
 import editElement from "./editElement.js";
 import editModeToggle from "./editModeToggle.js";
+import addAvailable from "./addAvailability.js";
 
 export default function generateElement(event, id, descr, auteur, dates) {
   let wrapper = document.getElementById("event__wrapper");
@@ -79,7 +80,6 @@ export default function generateElement(event, id, descr, auteur, dates) {
 
       if (dates[i].attendees[j].available === true) {
         attend.checked = true;
-        console.log("true");
       } else {
         attend.checked = false;
       }
@@ -89,6 +89,15 @@ export default function generateElement(event, id, descr, auteur, dates) {
       attendName.appendChild(attend);
     }
   }
+
+  let addAvailability = document.createElement("button");
+  let addAvailabilityText = document.createTextNode("+");
+
+  addAvailability.addEventListener("click", () => {
+    addAvailable(id);
+  });
+  addAvailability.appendChild(addAvailabilityText);
+  element.appendChild(addAvailability);
 
   wrapper.appendChild(element);
 }
