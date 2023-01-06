@@ -1,16 +1,16 @@
-import generateElement from "./displayElement.js";
+import generateElement from './displayElement.js'
 
-export default async function readElement() {
+export default async function readElement () {
   try {
-    const response = await fetch("http://localhost:3000/api/events", {
-      method: "GET",
-      headers: { "Content-Type": "application-json" },
-    });
-    const data = await response.json();
+    const response = await fetch('http://localhost:3000/api/events', {
+      method: 'GET',
+      headers: { 'Content-Type': 'application-json' }
+    })
+    const data = await response.json()
 
-    //Création de l'objet
-    for (let elem of data) {
-      let newEvent = {
+    // Création de l'objet
+    for (const elem of data) {
+      const newEvent = {
         author: elem.author,
         created_at: elem.created_at,
         dates: elem.dates,
@@ -18,8 +18,8 @@ export default async function readElement() {
         id: elem.id,
         last_modification: elem.last_modification,
         name: elem.name,
-        num_modification: elem.num_modification,
-      };
+        num_modification: elem.num_modification
+      }
 
       generateElement(
         newEvent.name,
@@ -27,9 +27,9 @@ export default async function readElement() {
         newEvent.description,
         newEvent.author,
         newEvent.dates
-      );
+      )
     }
   } catch (e) {
-    console.log(e);
+    console.log(e)
   }
 }
