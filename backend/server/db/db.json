@@ -1,9 +1,22 @@
 [
   {
-    "id": "ab6861c9401b",
-    "name": "hhhhh",
-    "author": "Moi",
-    "description": "Descriptionrrrrrrrrr",
+    "id": "09403c176a55",
+    "name": "Bonjour à tous",
+    "author": "???",
+    "description": "C'est l'heure de célébrer notre réussite mes amis",
+    "dates": [
+      "2023-01-21"
+    ],
+    "created_at": "2023-01-06T09:52:21.345Z",
+    "num_modification": 10,
+    "last_modification": "2023-01-06T11:02:13.772Z",
+    "attendees": []
+  },
+  {
+    "id": "a307dfe84272",
+    "name": "Vi",
+    "author": "lmirhgmalzkrneg",
+    "description": "Description   ",
     "dates": [
       "2023-01-18"
     ],
@@ -71,57 +84,5 @@
     "created_at": "2021-11-15T00:00",
     "num_modification": 3,
     "last_modification": "2021-11-15T02:15"
-  },
-  {
-    "id": "38b643aeb883",
-    "name": "The big sale @ The Mall",
-    "description": "I want to buy stuff at the mall, but don't want to go alone who is up?",
-    "author": "Jean D'eau",
-    "dates": [
-      "2022-01-10",
-      "2022-02-10",
-      "2022-03-10",
-      "2022-03-11",
-      "2022-03-12"
-    ],
-    "attendees": [
-      {
-        "name": "Michou",
-        "dates": [
-          {
-            "date": "2022-01-10",
-            "available": true
-          }
-        ]
-      },
-      {
-        "name": "Jane Doe",
-        "dates": [
-          {
-            "date": "2022-01-10",
-            "available": true
-          },
-          {
-            "date": "2022-02-10",
-            "available": true
-          },
-          {
-            "date": "2022-03-10",
-            "available": true
-          },
-          {
-            "date": "2022-03-11",
-            "available": true
-          },
-          {
-            "date": "2022-03-12",
-            "available": false
-          }
-        ]
-      }
-    ],
-    "created_at": "2021-11-13T14:00",
-    "num_modification": 0,
-    "last_modification": "2021-11-13T14:00"
   }
 ]

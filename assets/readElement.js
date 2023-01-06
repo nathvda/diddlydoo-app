@@ -21,14 +21,6 @@ export default async function readElement() {
         num_modification: elem.num_modification,
       };
 
-      console.log(newEvent);
-
-      console.log(newEvent.author);
-      console.log(newEvent.created_at);
-      console.log(newEvent.dates);
-      console.log(newEvent.description);
-      console.log(newEvent.id);
-
       generateElement(
         newEvent.name,
         newEvent.id,
