@@ -1,6 +1,7 @@
 import deleteElement from "./deleteElement.js";
 import editModeToggle from "./editModeToggle.js";
 import addAvailable from "./addAvailability.js";
+import findBestPossibleDate from "./findBestPossibleDate.js";
 
 export default function generateElement(event, id, descr, auteur, dates) {
   const wrapper = document.getElementById("event__wrapper");
@@ -29,6 +30,18 @@ export default function generateElement(event, id, descr, auteur, dates) {
 
   author.appendChild(authorText);
   element.appendChild(author);
+
+  const bestDate = document.createElement("p");
+  bestDate.classList.add("event__card__bestDate");
+  let bestDateValue;
+  findBestPossibleDate(id).then((value) => {
+    bestDateValue = value;
+    console.log(bestDateValue);
+    const bestDateText = document.createTextNode(`${bestDateValue}`);
+    bestDate.appendChild(bestDateText);
+  });
+
+  element.appendChild(bestDate);
 
   const descrPara = document.createElement("p");
   descrPara.classList.add("event__card__description");
