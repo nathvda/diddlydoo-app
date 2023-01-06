@@ -7,8 +7,8 @@ import editModeToggle from "./editModeToggle.js";
 
 window.addEventListener("load", readElement);
 
-let myForm = document.getElementById('myform');
-myForm.addEventListener('submit', validateInput);
+let myForm = document.getElementById("myform");
+myForm.addEventListener("submit", validateInput);
 window.addEventListener("load", () => {
   findBestPossibleDate("f5b6564b5dc4");
 });
