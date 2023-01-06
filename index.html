@@ -18,15 +18,15 @@
         <h1>DIDLYDOO</h1>
     </header>
     <button arial-label="Add a new event" class="add">Add an event</button>
-    <form action ="//http://localhost:3000/api/events/" method="post" class="addEvent" id="myform">
+    <form action ="http://localhost:3000/api/events/" method="post" onsubmit="return validateInput()" name="myForm" class="addEvent" id="myform">
         <label for="name">Name :</label>
         <input type="text" name="name" class="input_name" id="name">
         <label for="author">Author :</label>
         <input type="text" name="author" class="input_author" id="author">
         <label for="description">Description :</label>
         <textarea type="text" name="description" class="input_description" id="description">Description</textarea>
-        <label for="date1">Date 1 :</label>
-        <input type="date" name="date1" id="date1">
+        <label for="dates[]">Date 1 :</label>
+        <input type="date" name="dates[]" id="date1">
         <input type="submit" value="Create" />
     </form>
     <footer>
