@@ -11,7 +11,7 @@ export default function generateElement(event, id, descr, auteur, dates) {
   element.setAttribute("id", id);
 
   let cardName = document.createElement("h3");
-  cardName.classList.add("card__name");
+  cardName.classList.add("event__card__name");
   let cardNameText = document.createTextNode(event);
   cardName.appendChild(cardNameText);
   element.appendChild(cardName);
@@ -92,9 +92,10 @@ export default function generateElement(event, id, descr, auteur, dates) {
 
   let addAvailability = document.createElement("button");
   let addAvailabilityText = document.createTextNode("+");
+  addAvailability.classList.add("event__card__button--addDates");
 
   addAvailability.addEventListener("click", () => {
-    addAvailable(id);
+    addAvailable(id, dates);
   });
   addAvailability.appendChild(addAvailabilityText);
   element.appendChild(addAvailability);
