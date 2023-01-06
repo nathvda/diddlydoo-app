@@ -15,7 +15,8 @@ body {
   font-size: 18px;
   min-height: 100vh;
   font-family: inter;
-  background-image: linear-gradient(180deg, var(--mainColor), var(--gray));
+  background: rgb(211, 94, 53);
+  background: linear-gradient(90deg, rgba(211, 94, 53, 0.5130646008) 0%, rgba(102, 111, 136, 0.4654455532) 32%, rgba(202, 203, 213, 0.8379945728) 88%);
 }
 
 #event__wrapper {
