@@ -10,8 +10,8 @@ export default function generateElement(event, id, descr, auteur, dates) {
   element.classList.add("event__card");
   element.setAttribute("id", id);
 
-  const divHeader = document.createElement('div');
-  divHeader.classList.add('event__card__divHeader');
+  const divHeader = document.createElement("div");
+  divHeader.classList.add("event__card__divHeader");
   element.appendChild(divHeader);
 
   const imageCard = document.createElement("div");
@@ -104,7 +104,7 @@ export default function generateElement(event, id, descr, auteur, dates) {
   modificationButton.classList.add("event__card__button--edit");
 
   modificationButton.addEventListener("click", () => {
-    editModeToggle(id);
+    editModeToggle(id, divHeader);
   });
   modificationButton.appendChild(modificationButtonText);
   element.appendChild(modificationButton);

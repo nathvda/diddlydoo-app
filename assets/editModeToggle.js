@@ -1,22 +1,25 @@
 import editElement from "./editElement.js";
 
-export default function editModeToggle(id) {
+export default function editModeToggle(id, parent) {
   const elem = document.getElementById(id);
 
-  const titre = elem.querySelector(".card__name");
+  const titre = elem.querySelector(".event__card__name");
   console.log(titre.innerHTML);
 
   const titreModif = document.createElement("input");
   titreModif.value = titre.innerHTML;
+  titreModif.classList.add("event__card__name--editMode");
   console.log(titreModif);
 
-  elem.replaceChild(titreModif, titre);
+  parent.replaceChild(titreModif, titre);
 
   const description = elem.querySelector(".event__card__description");
   console.log(description.innerHTML);
 
   const descriModif = document.createElement("input");
   descriModif.value = description.innerHTML;
+  descriModif.classList.add("event__card__description-editMode");
+
   console.log(descriModif);
 
   elem.replaceChild(descriModif, description);
@@ -26,6 +29,7 @@ export default function editModeToggle(id) {
 
   const authorModif = document.createElement("input");
   authorModif.value = author.innerHTML;
+  authorModif.classList.add("event__card__author-editMode");
   console.log(authorModif);
 
   elem.replaceChild(authorModif, author);
