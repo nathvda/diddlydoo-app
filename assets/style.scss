@@ -3,6 +3,12 @@
 //font-family: 'Kodchasan', sans-serif;
 //font-family: 'Patrick Hand', cursive;
 
+//variables
+$orange : #d35e35;
+$darkBlue : #3d4251;
+$blue : #666f88;
+$lightBlue : #cacbd5;
+
 //mixins
 @mixin fonts ($fontSize, $weigth) {
     font-family: 'Kodchasan', sans-serif;
@@ -27,9 +33,36 @@ body {
     font-size: 18px;
     min-height: 100vh;
     font-family: inter;
-    background: rgb(211,94,53);
-    background: linear-gradient(90deg, rgba(211,94,53,0.5130646008403361) 0%, rgba(102,111,136,0.46544555322128855) 32%, rgba(202,203,213,0.8379945728291316) 88%);
 
+}
+
+.header {
+    &__images {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo {
+        width: 35%;
+    }
+    &__menu {
+        width: 8%;
+        height: 8%;
+        margin-right: 5%;
+    }
+    &__title {
+        font-family: 'Patrick Hand', cursive;
+        font-size: 7vw;
+        color: $darkBlue;
+        text-align: end;
+        margin: 5% 5% 5% 0%;
+        height: 7vh;
+        line-height: 0vh;
+        text-shadow: 0.45vw 0.45vw 0px white, 
+        0.9vw 0.9vw 0px #cacbd5, 
+        1.35vw 1.35vw 0px #d35e35, 
+        1.8vw 1.8vw 0px #666f88,;
+    }
 }
 
 #event__wrapper {
