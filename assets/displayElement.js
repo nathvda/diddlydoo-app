@@ -1,5 +1,6 @@
 import deleteElement from "./deleteElement.js";
 import editElement from "./editElement.js";
+import editModeToggle from "./editModeToggle.js";
 
 export default function generateElement(event, id, descr, auteur, dates) {
   let wrapper = document.getElementById("event__wrapper");
@@ -20,7 +21,7 @@ export default function generateElement(event, id, descr, auteur, dates) {
   modificationButton.classList.add("event__card__button--edit");
 
   modificationButton.addEventListener("click", () => {
-    editElement(id);
+    editModeToggle(id);
   });
   modificationButton.appendChild(modificationButtonText);
   element.appendChild(modificationButton);
@@ -36,17 +37,18 @@ export default function generateElement(event, id, descr, auteur, dates) {
   deleteButton.appendChild(deleteButtonText);
   element.appendChild(deleteButton);
 
+  let author = document.createElement("p");
+  author.classList.add("event__card__author");
+  let authorText = document.createTextNode(`${auteur}`);
+
+  author.appendChild(authorText);
+  element.appendChild(author);
+
   let descrPara = document.createElement("p");
   descrPara.classList.add("event__card__description");
   let descrParaText = document.createTextNode(descr);
   descrPara.appendChild(descrParaText);
   element.appendChild(descrPara);
-
-  let author = document.createElement("p");
-  author.classList.add("event__card__author");
-  let authorText = document.createTextNode(`by: ${auteur}`);
-  author.appendChild(authorText);
-  element.appendChild(author);
 
   let titre = document.createElement("h4");
   let titreText = document.createTextNode("Attendees");
@@ -56,7 +58,6 @@ export default function generateElement(event, id, descr, auteur, dates) {
   element.appendChild(titre);
 
   for (let i = 0; i < dates.length; i++) {
-    console.log(dates[i]);
     let date_box = document.createElement("div");
     let date = document.createElement("h5");
     date.classList.add("event__card__date");
@@ -75,6 +76,13 @@ export default function generateElement(event, id, descr, auteur, dates) {
       attendName.appendChild(attendNameText);
 
       attend.setAttribute("type", "checkbox");
+
+      if (dates[i].attendees[j].available === true) {
+        attend.checked = true;
+        console.log("true");
+      } else {
+        attend.checked = false;
+      }
       attend.classList.add("event__card__attendee");
 
       element.appendChild(attendName);
