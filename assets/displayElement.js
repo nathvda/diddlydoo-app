@@ -28,8 +28,12 @@ export default function generateElement(event, id, descr, auteur, dates) {
   author.classList.add("event__card__author");
   const authorText = document.createTextNode(`${auteur}`);
 
+  const divAuthorDate = document.createElement('div');
+  divAuthorDate.classList.add('event__card__divAuthorDate');
+  element.appendChild(divAuthorDate);
+
   author.appendChild(authorText);
-  element.appendChild(author);
+  divAuthorDate.appendChild(author);
 
   const bestDate = document.createElement("p");
   bestDate.classList.add("event__card__bestDate");
@@ -41,7 +45,7 @@ export default function generateElement(event, id, descr, auteur, dates) {
     bestDate.appendChild(bestDateText);
   });
 
-  element.appendChild(bestDate);
+  divAuthorDate.appendChild(bestDate);
 
   const descrPara = document.createElement("p");
   descrPara.classList.add("event__card__description");

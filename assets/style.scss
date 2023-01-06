@@ -99,11 +99,19 @@ main {
             color : $darkBlue;
             padding-right: 10%;
         }
+        &__divAuthorDate {
+            display: flex;
+            justify-content: space-around;
+            @include fonts(4.5vw, 400);
+            margin-bottom: 3%;
+        }
         &__author {
             margin-left: 5%;
         }
         &__description {
-            margin-left: 5%;
+            margin: 0% 10% 5% 10%;
+            text-align: center;
+            @include fonts(4vw, 400)
         }
         &__title4 {
             text-align: center;
