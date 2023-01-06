@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="shortcut icon" href="#" type="image/x-icon">
     <script defer src="./assets/index.js" type="module"></script>
+    <script defer src="./assets/validateInput.js" type="module"></script>
     <title>Diddlydoo App</title>
 </head>
 
@@ -21,16 +22,27 @@
         <div id="event__wrapper"></div>
     </main>
     <button arial-label="Add a new event" class="add">Add an event</button>
-    <form action="http://localhost:3000/api/events/" method="post" onsubmit="return validateInput()" name="myForm"
-        class="addEvent" id="myform">
+    <form action ="http://localhost:3000/api/events/" method="post" class="addEvent" id="myform" target="_blank">
         <label for="name">Name :</label>
         <input type="text" name="name" class="input_name" id="name">
+        <br>
+        <span id="errorName"></span>
+        <br>
         <label for="author">Author :</label>
         <input type="text" name="author" class="input_author" id="author">
+        <br>
+        <span id="errorAuthor"></span>
+        <br>
         <label for="description">Description :</label>
-        <textarea type="text" name="description" class="input_description" id="description">Description</textarea>
-        <label for="dates[]">Date 1 :</label>
+        <textarea type="text" name="description" class="input_description" id="description"></textarea>
+        <br>
+        <span id="errorDescription"></span>
+        <br>
+        <label for="dates[]">Date :</label>
         <input type="date" name="dates[]" id="date1">
+        <br>
+        <span id="errorDate"></span>
+        <br>
         <input type="submit" value="Create" />
     </form>
     <footer>
