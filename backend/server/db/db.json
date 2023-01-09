@@ -1,5 +1,21 @@
 [
   {
+    "id": "e10fb806da7c",
+    "name": "Marilyn",
+    "author": "Hqdsklj",
+    "description": "On sait pas trop mais ça sera cool",
+    "dates": [
+      "2023-01-04",
+      "2023-01-25",
+      "2023-01-02",
+      "2023-01-30"
+    ],
+    "created_at": "2023-01-09T09:37:21.675Z",
+    "num_modification": 0,
+    "last_modification": "2023-01-09T09:37:21.675Z",
+    "attendees": []
+  },
+  {
     "id": "c11b7fa754e5",
     "name": "Les gateaux de mamy",
     "author": "Granny",
@@ -145,14 +161,6 @@
         "name": "Michou",
         "dates": [
           {
-            "date": "2022-03-17",
-            "available": true
-          },
-          {
-            "date": "2022-03-18",
-            "available": false
-          },
-          {
             "date": "2022-03-21",
             "available": true
           }
@@ -175,7 +183,7 @@
         "name": "Johnny",
         "dates": [
           {
-            "date": "2022-03-18",
+            "date": "2022-03-21",
             "available": true
           }
         ]
@@ -193,8 +201,8 @@
         "name": "Marianne",
         "dates": [
           {
-            "date": "2022-03-17",
-            "available": false
+            "date": "2022-03-22",
+            "available": true
           }
         ]
       },
@@ -203,7 +211,7 @@
         "dates": [
           {
             "date": "2022-03-22",
-            "available": true
+            "available": false
           }
         ]
       },
@@ -211,7 +219,7 @@
         "name": "Georginette",
         "dates": [
           {
-            "date": "2022-03-21",
+            "date": "2022-03-22",
             "available": true
           }
         ]
@@ -220,7 +228,7 @@
         "name": "jjjjj",
         "dates": [
           {
-            "date": "2022-03-17",
+            "date": "2022-03-22",
             "available": true
           }
         ]

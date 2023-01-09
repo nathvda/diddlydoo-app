@@ -2,6 +2,7 @@ import deleteElement from "./deleteElement.js";
 import editModeToggle from "./editModeToggle.js";
 import addAvailable from "./addAvailability.js";
 import findBestPossibleDate from "./findBestPossibleDate.js";
+import checkboxUnavailable from "./checkboxUnavailable.js";
 
 export default function generateElement(event, id, descr, auteur, dates) {
   const wrapper = document.getElementById("event__wrapper");
@@ -40,7 +41,6 @@ export default function generateElement(event, id, descr, auteur, dates) {
   let bestDateValue;
   findBestPossibleDate(id).then((value) => {
     bestDateValue = value;
-    console.log(bestDateValue);
     const bestDateText = document.createTextNode(`${bestDateValue}`);
     bestDate.appendChild(bestDateText);
   });
@@ -94,6 +94,12 @@ export default function generateElement(event, id, descr, auteur, dates) {
       attendName.appendChild(attendNameText);
 
       attend.setAttribute("type", "checkbox");
+
+      attend.addEventListener("change", () => {
+
+        checkboxUnavailable(id, dates[i].date, dates[i].attendees[j].name, attend.checked);
+
+      })
 
       if (dates[i].attendees[j].available === true) {
         attend.checked = true;
