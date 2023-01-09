@@ -51,7 +51,17 @@
     "created_at": "2023-01-09T07:52:52.370Z",
     "num_modification": 0,
     "last_modification": "2023-01-09T07:52:52.370Z",
-    "attendees": []
+    "attendees": [
+      {
+        "name": "Nour",
+        "dates": [
+          {
+            "date": "2023-01-26",
+            "available": true
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "62aade5768c7",
