@@ -22,20 +22,32 @@
     </header>
     <main>
     <form action ="http://localhost:3000/api/events/" method="post" class="addEvent" id="myform" target="_blank">
-        <label for="name">Name :</label>
-        <input type="text" name="name" class="input_name" id="name">
-        <div id="errorName"></div>
-        <label for="author">Author :</label>
-        <input type="text" name="author" class="input_author" id="author">
+        <div class="form__nameauthor">
+            <div class="form__name">
+                <label for="name">Name :</label>
+                <input type="text" name="name" class="input_name" id="name">
+            </div>
+        <div id="errorName"></
+            <div class="form__author">
+                <label for="author">Author :</label>
+                <input type="text" name="author" class="input_author" id="author">
+            </div>
+        </div>
         <div id="errorAuthor"></div>
-        <label for="description">Description :</label>
-        <textarea type="text" name="description" class="input_description" id="description"></textarea>
-        <div id="errorDescription"></div>
-        <label for="dates[]">Date :</label>
-        <input type="date" name="dates[]"  class="dates" id="date1">
+        <div class="form__description">
+            <label for="description">Description :</label>
+            <textarea type="text" name="description" class="input_description" id="description"></textarea>
+            <div id="errorDescription"></div>
+        </div>
+        <div class="form__dates">
+            <label for="dates[]">Date :</label>
+            <input type="date" name="dates[]"  class="dates" id="date1">
+        </div>
         <div id="errordate1"></div>
-        <button id="addDate">Add new date</button>
-        <input type="submit" value="Create" />
+        <div class="buttons">
+            <button id="addDate">Add new date</button>
+            <input id="create" type="submit" value="Create" />
+        </div>
     </form>
         <div id="event__wrapper"></div>
     </main>
