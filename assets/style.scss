@@ -238,7 +238,70 @@ main {
     }
 
 }
+//formulaire
+.input_name,.input_author,.input_description,.dates{
+    background-color:$blue;
+    border-radius: 2em;
+    border: none;
+    display: flex;
+    margin-top: 3vw;
+    @include fonts (16px,200);
+    color: white;
+    text-align:center; 
+    margin-bottom: 10vw;
+}
+.input_name,.input_author{
+    width: 30vw;
+}
+.input_description{
+    width: 80vw;
+}
+.dates{
+    height: 15vw;
+    width: 40vw;
+}
+label{
+    @include fonts(20px,400)
+}
 
+.form__nameauthor{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50vw;
+
+    .form__name,.form__author{
+        flex-direction: column;
+    }
+}
+.form__description,.form__dates{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#addDate{
+    border-radius: 50px;
+    padding: 2vw;
+    background-color: $darkBlue; 
+    color: $lightBlue;
+}
+#create{
+    border-radius: 50px;
+    padding: 2vw;
+    width: 25vw;
+    background-color: $orange;
+    color:$lightBlue
+    
+}
 // Mise en page du footer
 .footer{
     background-color: $lightBlue;

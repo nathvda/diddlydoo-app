@@ -218,6 +218,79 @@ main .addEvent {
   width: 10vw;
 }
 
+.input_name, .input_author, .input_description, .dates {
+  background-color: #666f88;
+  border-radius: 2em;
+  border: none;
+  display: flex;
+  margin-top: 3vw;
+  font-family: "Kodchasan", sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  color: white;
+  text-align: center;
+  margin-bottom: 10vw;
+}
+
+.input_name, .input_author {
+  width: 30vw;
+}
+
+.input_description {
+  width: 80vw;
+}
+
+.dates {
+  height: 15vw;
+  width: 40vw;
+}
+
+label {
+  font-family: "Kodchasan", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.form__nameauthor {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50vw;
+}
+.form__nameauthor .form__name, .form__nameauthor .form__author {
+  flex-direction: column;
+}
+
+.form__description, .form__dates {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#addDate {
+  border-radius: 50px;
+  padding: 2vw;
+  background-color: #3d4251;
+  color: #cacbd5;
+}
+
+#create {
+  border-radius: 50px;
+  padding: 2vw;
+  width: 25vw;
+  background-color: #d35e35;
+  color: #cacbd5;
+}
+
 .footer {
   background-color: #cacbd5;
 }
