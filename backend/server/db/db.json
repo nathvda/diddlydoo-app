@@ -1,5 +1,170 @@
 [
   {
+    "id": "7b841b8dfdd1",
+    "name": "Terminer didlydoo-app",
+    "author": "Nour",
+    "description": "On va enfin finir ce projet !",
+    "dates": [
+      "2023-01-10"
+    ],
+    "created_at": "2023-01-09T14:24:31.677Z",
+    "num_modification": 0,
+    "last_modification": "2023-01-09T14:24:31.677Z",
+    "attendees": [
+      {
+        "name": "Edouard",
+        "dates": [
+          {
+            "date": "2023-01-10",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "Nathalie",
+        "dates": [
+          {
+            "date": "2023-01-10",
+            "available": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5e61e0e489b4",
+    "name": "La soirée Tupperware de Martine",
+    "author": "Martine",
+    "description": "Venez dépenser vos sous parce que vous aimez votre amie, merci !",
+    "dates": [
+      "2023-04-14",
+      "2023-01-28",
+      "2023-01-31"
+    ],
+    "created_at": "2023-01-09T09:52:02.406Z",
+    "num_modification": 1,
+    "last_modification": "2023-01-09T15:04:27.876Z",
+    "attendees": [
+      {
+        "name": "Jonas",
+        "dates": [
+          {
+            "date": "2023-04-14",
+            "available": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "e10fb806da7c",
+    "name": "Marilyn",
+    "author": "Hqdsklj",
+    "description": "On sait pas trop mais ça sera cool",
+    "dates": [
+      "2023-01-04",
+      "2023-01-25",
+      "2023-01-02",
+      "2023-01-30"
+    ],
+    "created_at": "2023-01-09T09:37:21.675Z",
+    "num_modification": 0,
+    "last_modification": "2023-01-09T09:37:21.675Z",
+    "attendees": [
+      {
+        "name": "Hubert",
+        "dates": [
+          {
+            "date": "2023-01-04",
+            "available": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "c11b7fa754e5",
+    "name": "Les gateaux de mamy",
+    "author": "Granny",
+    "description": "J'ai fait trop de tartes venez en manger les enfants",
+    "dates": [
+      "2023-01-26"
+    ],
+    "created_at": "2023-01-09T07:52:52.370Z",
+    "num_modification": 0,
+    "last_modification": "2023-01-09T07:52:52.370Z",
+    "attendees": [
+      {
+        "name": "Nour",
+        "dates": [
+          {
+            "date": "2023-01-26",
+            "available": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "62aade5768c7",
+    "name": "Patrick's birthday",
+    "author": "Patrick",
+    "description": "Come to my party y'all",
+    "dates": [
+      "2023-01-11"
+    ],
+    "created_at": "2023-01-06T15:22:53.905Z",
+    "num_modification": 0,
+    "last_modification": "2023-01-06T15:22:53.905Z",
+    "attendees": [
+      {
+        "name": "lljlkjlkj",
+        "dates": [
+          {
+            "date": "2023-01-11",
+            "available": false
+          }
+        ]
+      },
+      {
+        "name": "hkjhkjhk",
+        "dates": [
+          {
+            "date": "2023-01-11",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "Marie",
+        "dates": [
+          {
+            "date": "2023-01-11",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "Hohoho",
+        "dates": [
+          {
+            "date": "2023-01-11",
+            "available": false
+          }
+        ]
+      },
+      {
+        "name": "Georginette",
+        "dates": [
+          {
+            "date": "2023-01-11",
+            "available": true
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "f5b6564b5dc4",
     "name": "My sweet 16",
     "description": "I am going to be 16, let us all party together! Help me pick a date so we can go together",
@@ -77,7 +242,7 @@
         "dates": [
           {
             "date": "2022-01-10",
-            "available": false
+            "available": true
           },
           {
             "date": "2022-02-10",
