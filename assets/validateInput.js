@@ -3,7 +3,6 @@
 export default function validateInput(e){
     e.preventDefault();
     let form = document.getElementById('myform');
-    let err = document.getElementById('errorName');
     let names = ["name", "author", "description"];
     let submit = true;
     for (let n of names){

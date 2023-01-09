@@ -11,13 +11,13 @@ export default function addDateOnClick(e){
     newDate.setAttribute('id', 'date2');
     minusButton.setAttribute('id', 'suppDate');
     minusButton.textContent = 'Supress';
-    form.insertBefore(newDate, e.target);
-    form.insertBefore(divError, e.target);
-    form.insertBefore(minusButton, e.target);
-    minusButton.addEventListener('click', (el) => {
-        el.preventDefault();
-        form.removeChild(newDate);
-        form.removeChild(divError);
-        form.removeChild(minusButton);
-    })
+    document.querySelector('.form__dates').appendChild(newDate);
+    // form.insertBefore(divError, e.target);
+    // form.insertBefore(minusButton, e.target);
+    // minusButton.addEventListener('click', (el) => {
+    //     el.preventDefault();
+    //     form.removeChild(newDate);
+    //     form.removeChild(divError);
+    //     form.removeChild(minusButton);
+    // })
 }
