@@ -14,8 +14,17 @@ export default function validateInput(e){
         }
         else if (form[n].value.length > 256){
             form[n].nextElementSibling.nextElementSibling.textContent = "This field must contain at leat 256 characters";
+            form[n].nextElementSibling.nextElementSibling.style.color = 'red';
             submit = false;
         } 
+    }
+    let dates = document.getElementsByClassName('dates');
+    for (let date of dates){
+    if (date.value == "") {
+            date.nextElementSibling.nextElementSibling.textContent = "This field must be filled";
+            date.nextElementSibling.nextElementSibling.style.color = 'red';
+            submit = false;
+        }
     }
     if (submit==true) {
         form.submit();
