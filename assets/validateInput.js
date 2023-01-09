@@ -8,21 +8,21 @@ export default function validateInput(e){
     let submit = true;
     for (let n of names){
         if (form[n].value == "") {
-            form[n].nextElementSibling.nextElementSibling.textContent = "This field must be filled";
-            form[n].nextElementSibling.nextElementSibling.style.color = 'red';
+            form[n].nextElementSibling.textContent = "This field must be filled";
+            form[n].nextElementSibling.style.color = 'red';
             submit = false;
         }
         else if (form[n].value.length > 256){
-            form[n].nextElementSibling.nextElementSibling.textContent = "This field must contain at leat 256 characters";
-            form[n].nextElementSibling.nextElementSibling.style.color = 'red';
+            form[n].nextElementSibling.textContent = "This field must contain at leat 256 characters";
+            form[n].nextElementSibling.style.color = 'red';
             submit = false;
         } 
     }
     let dates = document.getElementsByClassName('dates');
     for (let date of dates){
-    if (date.value == "") {
-            date.nextElementSibling.nextElementSibling.textContent = "This field must be filled";
-            date.nextElementSibling.nextElementSibling.style.color = 'red';
+        if (date.value == "") {
+            date.nextElementSibling.textContent = "This field must be filled";
+            date.nextElementSibling.style.color = 'red';
             submit = false;
         }
     }

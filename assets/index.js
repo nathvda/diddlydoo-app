@@ -4,7 +4,7 @@ import generateElement from "./displayElement.js";
 import validateInput from "./validateInput.js";
 import findBestPossibleDate from "./findBestPossibleDate.js";
 import editModeToggle from "./editModeToggle.js";
-import addDateOnClick from "./addDateOnClick.js";
+import addDateOnClick from "./addSupprDateOnClick.js";
 
 window.addEventListener("load", readElement);
 
