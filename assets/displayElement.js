@@ -60,10 +60,14 @@ export default function generateElement(event, id, descr, auteur, dates) {
   titre.appendChild(titreText);
   element.appendChild(titre);
 
+  const divAttendees = document.createElement('div');
+  divAttendees.classList.add('event__card__divAttendees');
+  element.appendChild(divAttendees);
+
   const arrayAttendees = document.createElement("div");
   arrayAttendees.classList.add("event__card__arrayAttendees");
 
-  element.appendChild(arrayAttendees);
+  divAttendees.appendChild(arrayAttendees);
 
   for (let i = 0; i < dates.length; i++) {
     const date_box = document.createElement("div");
@@ -102,28 +106,6 @@ export default function generateElement(event, id, descr, auteur, dates) {
     }
   }
 
-  const modificationButton = document.createElement("button");
-  const modificationButtonText = document.createTextNode("E");
-  modificationButton.setAttribute("type", "button");
-  modificationButton.classList.add("event__card__button--edit");
-
-  modificationButton.addEventListener("click", () => {
-    editModeToggle(id, divHeader);
-  });
-  modificationButton.appendChild(modificationButtonText);
-  element.appendChild(modificationButton);
-
-  const deleteButton = document.createElement("button");
-  const deleteButtonText = document.createTextNode("X");
-  deleteButton.setAttribute("type", "button");
-  deleteButton.classList.add("event__card__button--delete");
-
-  deleteButton.addEventListener("click", () => {
-    deleteElement(id);
-  });
-  deleteButton.appendChild(deleteButtonText);
-  element.appendChild(deleteButton);
-
   const addAvailability = document.createElement("button");
   const addAvailabilityText = document.createTextNode("+");
   addAvailability.classList.add("event__card__button--addDates");
@@ -132,7 +114,33 @@ export default function generateElement(event, id, descr, auteur, dates) {
     addAvailable(id, dates);
   });
   addAvailability.appendChild(addAvailabilityText);
-  element.appendChild(addAvailability);
+  divAttendees.appendChild(addAvailability);
+
+  const divButton = document.createElement('div');
+  divButton.classList.add('event__card__button');
+  element.appendChild(divButton);
+
+  const modificationButton = document.createElement("button");
+  //const modificationButtonText = document.createTextNode("E");
+  modificationButton.setAttribute("type", "button");
+  modificationButton.classList.add("event__card__button--edit");
+
+  modificationButton.addEventListener("click", () => {
+    editModeToggle(id, divHeader);
+  });
+  //modificationButton.appendChild(modificationButtonText);
+  divButton.appendChild(modificationButton);
+
+  const deleteButton = document.createElement("button");
+  //const deleteButtonText = document.createTextNode("X");
+  deleteButton.setAttribute("type", "button");
+  deleteButton.classList.add("event__card__button--delete");
+
+  deleteButton.addEventListener("click", () => {
+    deleteElement(id);
+  });
+  //deleteButton.appendChild(deleteButtonText);
+  divButton.appendChild(deleteButton);
 
   wrapper.appendChild(element);
 }

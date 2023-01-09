@@ -31,6 +31,11 @@
   text-shadow: 0.45vw 0.45vw 0px white, 0.9vw 0.9vw 0px #cacbd5, 1.35vw 1.35vw 0px #d35e35, 1.8vw 1.8vw 0px #666f88;
 }
 
+main .addEvent {
+  display: flex;
+  display: none;
+}
+
 #event__wrapper {
   display: flex;
   flex-direction: column;
@@ -54,7 +59,7 @@
 #event__wrapper .event__card__divHeader {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 #event__wrapper .event__card__image {
   background-image: url(./images/didlydoo-app-réseau.webp);
@@ -85,9 +90,37 @@
   margin: 0% 10% 5% 10%;
   text-align: center;
   font-family: "Kodchasan", sans-serif;
-  font-size: 4vw;
+  font-size: 4.5vw;
   font-weight: 400;
+  color: #666f88;
 }
 #event__wrapper .event__card__title4 {
   text-align: center;
+  font-family: "Kodchasan", sans-serif;
+  font-size: 4.5vw;
+  font-weight: 300;
+  color: #cacbd5;
+  background-color: #3d4251;
+  margin-left: 30%;
+  padding: 5% 2%;
+  width: 40%;
+  border-radius: 5vw;
+}
+#event__wrapper .event__card__divAttendees {
+  display: none;
+}
+#event__wrapper .event__card__button {
+  display: flex;
+  justify-content: end;
+}
+#event__wrapper .event__card__button--edit, #event__wrapper .event__card__button--delete {
+  background-image: url(./images/didlydoo-app-édition.webp);
+  background-size: cover;
+  width: 10vw;
+  height: 10vw;
+  border-style: none;
+  background-color: #cacbd5;
+}
+#event__wrapper .event__card__button--delete {
+  background-image: url(./images/didlydoo-app-supprimer.webp);
 }/*# sourceMappingURL=style.css.map */
