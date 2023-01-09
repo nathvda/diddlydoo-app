@@ -55,10 +55,10 @@ $lightBlue : #cacbd5;
 
 //mise en page du main
 main {
-    // .addEvent {
-    //     //display: flex;
-    //     display: none;
-    // }
+    .addEvent {
+        display: flex;
+        display: none;
+    }
 }
 
 #event__wrapper {
@@ -85,7 +85,7 @@ main {
         &__divHeader {
             display: flex;
             align-items: center;
-            justify-content: space-around;
+            justify-content: space-between;
         }
         &__image {
             background-image: url(./images/didlydoo-app-réseau.webp);
@@ -99,14 +99,49 @@ main {
             color : $darkBlue;
             padding-right: 10%;
         }
+        &__divAuthorDate {
+            display: flex;
+            justify-content: space-around;
+            @include fonts(4.5vw, 400);
+            margin-bottom: 3%;
+        }
         &__author {
             margin-left: 5%;
         }
         &__description {
-            margin-left: 5%;
+            margin: 0% 10% 5% 10%;
+            text-align: center;
+            @include fonts(4.5vw, 400);
+            color: $blue;
         }
         &__title4 {
             text-align: center;
+            @include fonts(4.5vw, 300);
+            color: $lightBlue;
+            background-color: $darkBlue;
+            margin-left: 30%;
+            padding: 5% 2%;
+            width: 40%;
+            border-radius: 5vw;
+        }
+        &__divAttendees {
+            display: none;
+        }
+        &__button {
+            display: flex;
+            justify-content: end;
+            &--edit {
+                background-image: url(./images/didlydoo-app-édition.webp);
+                background-size: cover;
+                width: 10vw;
+                height: 10vw;
+                border-style: none;
+                background-color: $lightBlue;
+            }
+            &--delete {
+                @extend .event__card__button--edit;
+                background-image: url(./images/didlydoo-app-supprimer.webp);
+            }
         }
     }
 

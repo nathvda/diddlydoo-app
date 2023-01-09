@@ -6,12 +6,12 @@ import findBestPossibleDate from "./findBestPossibleDate.js";
 export default function generateElement(event, id, descr, auteur, dates) {
   const wrapper = document.getElementById("event__wrapper");
 
-  const element = document.createElement("div");
+  const element = document.createElement("section");
   element.classList.add("event__card");
   element.setAttribute("id", id);
 
-  const divHeader = document.createElement('div');
-  divHeader.classList.add('event__card__divHeader');
+  const divHeader = document.createElement("div");
+  divHeader.classList.add("event__card__divHeader");
   element.appendChild(divHeader);
 
   const imageCard = document.createElement("div");
@@ -28,8 +28,12 @@ export default function generateElement(event, id, descr, auteur, dates) {
   author.classList.add("event__card__author");
   const authorText = document.createTextNode(`${auteur}`);
 
+  const divAuthorDate = document.createElement('div');
+  divAuthorDate.classList.add('event__card__divAuthorDate');
+  element.appendChild(divAuthorDate);
+
   author.appendChild(authorText);
-  element.appendChild(author);
+  divAuthorDate.appendChild(author);
 
   const bestDate = document.createElement("p");
   bestDate.classList.add("event__card__bestDate");
@@ -41,7 +45,7 @@ export default function generateElement(event, id, descr, auteur, dates) {
     bestDate.appendChild(bestDateText);
   });
 
-  element.appendChild(bestDate);
+  divAuthorDate.appendChild(bestDate);
 
   const descrPara = document.createElement("p");
   descrPara.classList.add("event__card__description");
@@ -56,6 +60,15 @@ export default function generateElement(event, id, descr, auteur, dates) {
   titre.appendChild(titreText);
   element.appendChild(titre);
 
+  const divAttendees = document.createElement('div');
+  divAttendees.classList.add('event__card__divAttendees');
+  element.appendChild(divAttendees);
+
+  const arrayAttendees = document.createElement("div");
+  arrayAttendees.classList.add("event__card__arrayAttendees");
+
+  divAttendees.appendChild(arrayAttendees);
+
   for (let i = 0; i < dates.length; i++) {
     const date_box = document.createElement("div");
     const date = document.createElement("h5");
@@ -65,7 +78,10 @@ export default function generateElement(event, id, descr, auteur, dates) {
     date.appendChild(dateText);
 
     date_box.appendChild(date);
-    element.appendChild(date_box);
+    arrayAttendees.appendChild(date_box);
+
+    const attendeeList = document.createElement("ul");
+    date_box.appendChild(attendeeList);
 
     for (let j = 0; j < dates[i].attendees.length; j++) {
       const attendName = document.createElement("li");
@@ -84,33 +100,11 @@ export default function generateElement(event, id, descr, auteur, dates) {
         attend.checked = false;
       }
       attend.classList.add("event__card__attendee");
+      attendeeList.appendChild(attendName);
 
-      element.appendChild(attendName);
       attendName.appendChild(attend);
     }
   }
-
-  const modificationButton = document.createElement("button");
-  const modificationButtonText = document.createTextNode("E");
-  modificationButton.setAttribute("type", "button");
-  modificationButton.classList.add("event__card__button--edit");
-
-  modificationButton.addEventListener("click", () => {
-    editModeToggle(id);
-  });
-  modificationButton.appendChild(modificationButtonText);
-  element.appendChild(modificationButton);
-
-  const deleteButton = document.createElement("button");
-  const deleteButtonText = document.createTextNode("X");
-  deleteButton.setAttribute("type", "button");
-  deleteButton.classList.add("event__card__button--delete");
-
-  deleteButton.addEventListener("click", () => {
-    deleteElement(id);
-  });
-  deleteButton.appendChild(deleteButtonText);
-  element.appendChild(deleteButton);
 
   const addAvailability = document.createElement("button");
   const addAvailabilityText = document.createTextNode("+");
@@ -120,7 +114,33 @@ export default function generateElement(event, id, descr, auteur, dates) {
     addAvailable(id, dates);
   });
   addAvailability.appendChild(addAvailabilityText);
-  element.appendChild(addAvailability);
+  divAttendees.appendChild(addAvailability);
+
+  const divButton = document.createElement('div');
+  divButton.classList.add('event__card__button');
+  element.appendChild(divButton);
+
+  const modificationButton = document.createElement("button");
+  //const modificationButtonText = document.createTextNode("E");
+  modificationButton.setAttribute("type", "button");
+  modificationButton.classList.add("event__card__button--edit");
+
+  modificationButton.addEventListener("click", () => {
+    editModeToggle(id, divHeader);
+  });
+  //modificationButton.appendChild(modificationButtonText);
+  divButton.appendChild(modificationButton);
+
+  const deleteButton = document.createElement("button");
+  //const deleteButtonText = document.createTextNode("X");
+  deleteButton.setAttribute("type", "button");
+  deleteButton.classList.add("event__card__button--delete");
+
+  deleteButton.addEventListener("click", () => {
+    deleteElement(id);
+  });
+  //deleteButton.appendChild(deleteButtonText);
+  divButton.appendChild(deleteButton);
 
   wrapper.appendChild(element);
 }
