@@ -243,17 +243,18 @@ main {
 .footer{
     background-color: $lightBlue;
     &__parag {
-        margin: 1.5em;
+        padding-top: 3vw;
         text-align: center;
         @include fonts(3.5vw, 300);
     }
     .termsPrivacy {
         text-align: center;
         margin-top: 2em;
+        padding-bottom: 2em;
         @include fonts (2vw, 600);
             a{
                 text-decoration: none;
-                color: black;
+                color: $darkBlue;
             }
     }
     .members
@@ -265,7 +266,7 @@ main {
         a
         {
         text-decoration: none;
-        color: black;
+        color: $darkBlue;
         @include fonts(2.5VW,600)
         }
     }
@@ -400,13 +401,28 @@ main {
                 @extend .event__card__available--input;
                 @include fonts(1.3vw, 400);
             }
-            &--selectAvailability {
-                @extend .event__card__available--selectDate;
-            }
             &--button {
-                @extend .event__card__available--selectDate;
                 width: 5vw;
             }
+        }
+    }
+}
+.footer{
+    background-color: $lightBlue;
+    &__parag {
+        @include fonts(1.5vw, 300);
+    }
+    .termsPrivacy {
+        margin-top: 2em;
+        @include fonts (1vw, 600);
+    }
+    .members
+    {
+    padding-top: 2em;
+
+        a
+        {
+        @include fonts(1.3vw,600)
         }
     }
 }
