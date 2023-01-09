@@ -245,13 +245,14 @@ main {
     border: none;
     display: flex;
     margin-top: 3vw;
-    @include fonts (16px,200);
+    @include fonts (5vw,200);
     color: white;
     text-align:center; 
     margin-bottom: 10vw;
 }
 .input_name,.input_author{
     width: 30vw;
+    height: 7vw;
 }
 .input_description{
     width: 80vw;
@@ -261,7 +262,7 @@ main {
     width: 40vw;
 }
 label{
-    @include fonts(20px,400)
+    @include fonts(5.5vw,400)
 }
 
 .form__nameauthor{
@@ -270,7 +271,7 @@ label{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin-top: 50vw;
+    margin-top: 12vw;
 
     .form__name,.form__author{
         flex-direction: column;
@@ -289,17 +290,21 @@ label{
     justify-content: space-around;
 }
 #addDate{
-    border-radius: 50px;
+    border-radius: 2vw;
     padding: 2vw;
     background-color: $darkBlue; 
     color: $lightBlue;
+    @include fonts(4vw, 400);
+    border-style: none;
 }
 #create{
-    border-radius: 50px;
+    border-radius: 2vw;
     padding: 2vw;
     width: 25vw;
     background-color: $orange;
-    color:$lightBlue
+    color:$lightBlue;
+    @include fonts(4vw, 400);
+    border-style: none;
     
 }
 // Mise en page du footer
@@ -361,6 +366,7 @@ label{
             1.05vw 1.05vw 0px #666f88,;
         }
     }
+
 //Main
 main {
     .addEvent {
@@ -470,6 +476,53 @@ main {
         }
     }
 }
+
+//Formulaire
+.input_name,.input_author,.input_description,.dates{
+    margin-top: 1.5vw;
+    @include fonts (2vw,200);
+    margin-bottom: 0vw;
+}
+.input_name,.input_author{
+    width: 10vw;
+    height: 3vw;
+}
+.input_description{
+    width: 40vw;
+    margin-bottom: 2vw;
+}
+.dates{
+    height: 7vw;
+    width: 15vw;
+
+}
+label{
+    @include fonts(2vw,400)
+}
+
+.form__nameauthor{
+    margin-top: 5vw;
+}
+#addDate{
+    border-radius: 2vw;
+    padding: 1vw;
+    background-color: $darkBlue; 
+    color: $lightBlue;
+    @include fonts(1.5vw, 400);
+    border-style: none;
+}
+#create{
+    border-radius: 2vw;
+    padding: 1vw;
+    width: 10vw;
+    background-color: $orange;
+    color:$lightBlue;
+    @include fonts(1.5vw, 400);
+    border-style: none;
+    
+}
+
+//Footer
 .footer{
     background-color: $lightBlue;
     &__parag {
