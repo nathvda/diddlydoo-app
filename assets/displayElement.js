@@ -72,6 +72,7 @@ export default function generateElement(event, id, descr, auteur, dates) {
 
   for (let i = 0; i < dates.length; i++) {
     const date_box = document.createElement("div");
+    date_box.classList.add('event__card__array');
     const date = document.createElement("h5");
     date.classList.add("event__card__date");
     const dateText = document.createTextNode(`${dates[i].date}`);
@@ -82,10 +83,12 @@ export default function generateElement(event, id, descr, auteur, dates) {
     arrayAttendees.appendChild(date_box);
 
     const attendeeList = document.createElement("ul");
+    attendeeList.classList.add('event__card__listAttendees');
     date_box.appendChild(attendeeList);
 
     for (let j = 0; j < dates[i].attendees.length; j++) {
       const attendName = document.createElement("li");
+      attendName.classList.add('event__card__attendee');
       const attendNameText = document.createTextNode(
         dates[i].attendees[j].name
       );
@@ -109,7 +112,7 @@ export default function generateElement(event, id, descr, auteur, dates) {
         attend.checked = false;
 
       }
-      attend.classList.add("event__card__attendee");
+      attend.classList.add("event__card__disponibility");
       attendeeList.appendChild(attendName);
 
       attendName.appendChild(attend);
@@ -123,7 +126,7 @@ export default function generateElement(event, id, descr, auteur, dates) {
   addAvailability.addEventListener("click", () => {
     addAvailable(id, dates);
   });
-  addAvailability.appendChild(addAvailabilityText);
+  //addAvailability.appendChild(addAvailabilityText);
   divAttendees.appendChild(addAvailability);
 
   
