@@ -178,6 +178,40 @@ main .addEvent {
   color: #cacbd5;
 }
 
+footer {
+  background-color: #cacbd5;
+}
+footer .termsPrivacy {
+  text-align: center;
+  margin-top: 2em;
+  font-family: "Kodchasan", sans-serif;
+  font-size: 1.5vw;
+  font-weight: 600;
+}
+footer .termsPrivacy a {
+  text-decoration: none;
+  color: black;
+}
+footer .p__footer {
+  margin: 1.5em;
+  text-align: center;
+  font-family: "Kodchasan", sans-serif;
+  font-size: 3.5vw;
+  font-weight: 300;
+}
+footer .members {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+footer .members a {
+  text-decoration: none;
+  color: black;
+  font-family: "Kodchasan", sans-serif;
+  font-size: 1.5VW;
+  font-weight: 600;
+}
+
 @media screen and (min-width: 1024px) {
   .event__card {
     display: flex;
@@ -190,8 +224,12 @@ main .addEvent {
   .event__card h4 {
     margin-right: 30%;
   }
-  .event__card h3 {
-    font-size: 28px;
+  .event__card__name {
+    font-family: "Kodchasan", sans-serif;
+    font-size: 2vw;
+    font-weight: 600;
+    color: #3d4251;
+    padding-right: 10%;
   }
   #event__wrapper {
     display: flex;

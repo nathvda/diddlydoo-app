@@ -197,6 +197,43 @@ main {
     }
 
 }
+// footer
+footer{
+    background-color: $lightBlue;
+
+
+    .termsPrivacy
+    {
+    text-align: center;
+    margin-top: 2em;
+    @include fonts (1.5vw, 600);
+
+        a{
+        text-decoration: none;
+        color: black;
+        }
+    }
+    .p__footer
+    {
+        margin: 1.5em;
+        text-align: center;
+        @include fonts(3.5vw, 300);
+    }
+    .members
+    {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+        a
+        {
+        text-decoration: none;
+        color: black;
+        @include fonts(1.5VW,600)
+        }
+    }
+}
+
 
 
 @media screen and (min-width:1024px){
@@ -212,8 +249,10 @@ main {
            margin-right: 30%;
         }
 
-        h3{
-            font-size: 28px;
+        &__name {
+            @include fonts(2vw, 600);
+            color : $darkBlue;
+            padding-right: 10%;
         }
     }
     #event__wrapper{
