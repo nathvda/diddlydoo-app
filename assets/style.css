@@ -44,6 +44,7 @@ main .addEvent {
 #event__wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 #event__wrapper .event__card {
   margin: 7%;
@@ -133,6 +134,7 @@ main .addEvent {
   font-weight: 400;
   width: 32vw;
   border-right: 0.5vw solid #d35e35;
+  margin-bottom: 2vw;
 }
 #event__wrapper .event__card__listAttendees {
   margin-left: 5vw;
@@ -180,6 +182,7 @@ main .addEvent {
   z-index: 1;
   left: 20vw;
   bottom: 5vw;
+  box-shadow: 2vw 2vw 10vw #3d4251;
 }
 #event__wrapper .event__card__available--label {
   color: #cacbd5;
@@ -201,4 +204,169 @@ main .addEvent {
 }
 #event__wrapper .event__card__available--button {
   width: 10vw;
+}
+
+.footer {
+  background-color: #cacbd5;
+}
+.footer__parag {
+  margin: 1.5em;
+  text-align: center;
+  font-family: "Kodchasan", sans-serif;
+  font-size: 3.5vw;
+  font-weight: 300;
+}
+.footer .termsPrivacy {
+  text-align: center;
+  margin-top: 2em;
+  font-family: "Kodchasan", sans-serif;
+  font-size: 2vw;
+  font-weight: 600;
+}
+.footer .termsPrivacy a {
+  text-decoration: none;
+  color: black;
+}
+.footer .members {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.footer .members a {
+  text-decoration: none;
+  color: black;
+  font-family: "Kodchasan", sans-serif;
+  font-size: 2.5VW;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  .header__logo {
+    width: 10%;
+  }
+  .header__menu {
+    width: 3%;
+    height: 3%;
+    margin-right: 2%;
+  }
+  .header__title {
+    font-size: 4vw;
+    margin: 7% 2% 0% 0%;
+    text-shadow: 0.23vw 0.23vw 0px white, 0.46vw 0.46vw 0px #cacbd5, 0.75vw 0.75vw 0px #d35e35, 1.05vw 1.05vw 0px #666f88;
+  }
+  main .addEvent {
+    display: flex;
+    display: none;
+    background: rgba(255, 255, 255, 0.31);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.8px);
+    -webkit-backdrop-filter: blur(6.8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 200%;
+  }
+  #event__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #event__wrapper .event__card {
+    margin: 5% 1.5%;
+    border-radius: 2vw;
+    width: 30%;
+    position: relative;
+    padding: 1vw;
+  }
+  #event__wrapper .event__card::before {
+    width: 0.2vw;
+  }
+  #event__wrapper .event__card__image {
+    width: 3vw;
+    height: 3vw;
+  }
+  #event__wrapper .event__card__name {
+    font-family: "Kodchasan", sans-serif;
+    font-size: 2vw;
+    font-weight: 600;
+    text-align: end;
+    padding: 2% 3% 2% 0%;
+  }
+  #event__wrapper .event__card__divAuthorDate {
+    font-family: "Kodchasan", sans-serif;
+    font-size: 1.7vw;
+    font-weight: 400;
+  }
+  #event__wrapper .event__card__description {
+    font-family: "Kodchasan", sans-serif;
+    font-size: 1.5vw;
+    font-weight: 400;
+  }
+  #event__wrapper .event__card__title4 {
+    font-family: "Kodchasan", sans-serif;
+    font-size: 1.5vw;
+    font-weight: 300;
+    margin-bottom: 5%;
+  }
+  #event__wrapper .event__card__divAttendees {
+    border-radius: 2vw;
+  }
+  #event__wrapper .event__card__array {
+    border-bottom: 0.2vw solid #d35e35;
+  }
+  #event__wrapper .event__card__date {
+    font-family: "Kodchasan", sans-serif;
+    font-size: 1.1vw;
+    font-weight: 400;
+    border-right: 0.2vw solid #d35e35;
+    margin-bottom: 0.5vw;
+  }
+  #event__wrapper .event__card__listAttendees {
+    margin-left: 0vw;
+    font-family: "Kodchasan", sans-serif;
+    font-size: 1.1vw;
+    font-weight: 400;
+    margin-bottom: 0.5vw;
+  }
+  #event__wrapper .event__card__button--addDates {
+    width: 2.5vw;
+    height: 2.5vw;
+  }
+  #event__wrapper .event__card__button--edit, #event__wrapper .event__card__button--delete {
+    width: 2.5vw;
+    height: 2.5vw;
+  }
+  #event__wrapper .event__card__available--menu {
+    width: 17vw;
+    border-radius: 1.5vw;
+    padding: 1vw;
+    left: 9vw;
+    bottom: 5vw;
+  }
+  #event__wrapper .event__card__available--label {
+    font-family: "Kodchasan", sans-serif;
+    font-size: 1.3vw;
+    font-weight: 400;
+    margin: 0.5vw;
+  }
+  #event__wrapper .event__card__available--input, #event__wrapper .event__card__available--selectDate, #event__wrapper .event__card__available--selectAvailability, #event__wrapper .event__card__available--button {
+    border-radius: 1vw;
+    height: 3vw;
+    width: 15vw;
+  }
+  #event__wrapper .event__card__available--selectDate, #event__wrapper .event__card__available--selectAvailability, #event__wrapper .event__card__available--button {
+    font-family: "Kodchasan", sans-serif;
+    font-size: 1.3vw;
+    font-weight: 400;
+  }
+  #event__wrapper .event__card__available--button {
+    width: 5vw;
+  }
 }/*# sourceMappingURL=style.css.map */

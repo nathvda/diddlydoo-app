@@ -80,6 +80,7 @@ main {
 #event__wrapper {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 
     .event__card {
         margin: 7%;
@@ -161,6 +162,7 @@ main {
             @include fonts(4vw, 400);
             width: 32vw;
             border-right: 0.5vw solid $orange;
+            margin-bottom: 2vw;
         }
         &__listAttendees{
             margin-left: 5vw;
@@ -208,6 +210,7 @@ main {
                 z-index: 1;
                 left: 20vw;
                 bottom: 5vw;
+                box-shadow: 2vw 2vw 10vw $darkBlue;
             }
             &--label {
                 color: $lightBlue;
@@ -236,3 +239,175 @@ main {
 
 }
 
+// Mise en page du footer
+.footer{
+    background-color: $lightBlue;
+    &__parag {
+        margin: 1.5em;
+        text-align: center;
+        @include fonts(3.5vw, 300);
+    }
+    .termsPrivacy {
+        text-align: center;
+        margin-top: 2em;
+        @include fonts (2vw, 600);
+            a{
+                text-decoration: none;
+                color: black;
+            }
+    }
+    .members
+    {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+        a
+        {
+        text-decoration: none;
+        color: black;
+        @include fonts(2.5VW,600)
+        }
+    }
+}
+
+//Réalisation des mediaqueries
+@media screen and (min-width: 1024px){
+//Body
+    body {
+        width: 100%;
+        height: 100%;
+    }
+//Header
+    .header {
+        &__logo {
+            width: 10%;
+        }
+        &__menu {
+            width: 3%;
+            height: 3%;
+            margin-right: 2%;
+        }
+        &__title {
+            font-size: 4vw;
+            margin: 7% 2% 0% 0%;
+            text-shadow: 0.23vw 0.23vw 0px white, 
+            0.46vw 0.46vw 0px #cacbd5, 
+            0.75vw 0.75vw 0px #d35e35, 
+            1.05vw 1.05vw 0px #666f88,;
+        }
+    }
+//Main
+main {
+    .addEvent {
+        display: flex;
+        display: none;
+        background: rgba(255, 255, 255, 0.31);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(6.8px);
+        -webkit-backdrop-filter: blur(6.8px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        width: 100%;
+        height: 200%;
+    }
+}
+
+#event__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .event__card {
+        margin: 5% 1.5%;
+        border-radius: 2vw;
+        width: 30%;
+        position: relative;
+        padding: 1vw;
+        &::before {
+            width: 0.2vw;
+        }
+        &__image {
+            width: 3vw;
+            height: 3vw;
+        }
+        &__name {
+            @include fonts(2vw, 600);
+            text-align: end;
+            padding: 2% 3% 2% 0%
+        }
+        &__divAuthorDate {
+            @include fonts(1.7vw, 400);
+        }
+        &__description {
+            @include fonts(1.5vw, 400);
+        }
+        &__title4 {
+            @include fonts(1.5vw, 300);
+            margin-bottom: 5%;
+        }
+        &__divAttendees {
+            //display: none;
+            border-radius: 2vw;
+        }
+        &__array {
+            border-bottom: 0.2vw solid $orange;
+        }
+        &__date {
+            @include fonts(1.1vw, 400);
+            border-right: 0.2vw solid $orange;
+            margin-bottom: 0.5vw;
+        }
+        &__listAttendees{
+            margin-left: 0vw;
+            @include fonts(1.1vw, 400);
+            margin-bottom: 0.5vw;
+        }
+        &__button {
+            &--addDates {
+                width: 2.5vw;
+                height: 2.5vw;
+            }
+            &--edit {
+                width: 2.5vw;
+                height: 2.5vw;
+            }
+            &--delete {
+                @extend .event__card__button--edit;
+            }
+        }
+        &__available {
+            &--menu {
+                width: 17vw;
+                border-radius: 1.5vw;
+                padding: 1vw;
+                left: 9vw;
+                bottom: 5vw;
+            }
+            &--label {
+                @include fonts(1.3vw, 400);
+                margin: 0.5vw;
+            }
+            &--input {
+                border-radius: 1vw;
+                height: 3vw;
+                width: 15vw;
+            }
+            &--selectDate {
+                @extend .event__card__available--input;
+                @include fonts(1.3vw, 400);
+            }
+            &--selectAvailability {
+                @extend .event__card__available--selectDate;
+            }
+            &--button {
+                @extend .event__card__available--selectDate;
+                width: 5vw;
+            }
+        }
+    }
+}
+}
