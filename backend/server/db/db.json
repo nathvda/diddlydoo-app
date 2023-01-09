@@ -1,16 +1,75 @@
 [
   {
-    "id": "08865b6a55e0",
-    "name": "ghfgh",
-    "author": "fghfdh",
-    "description": "dfghdfh",
+    "id": "c11b7fa754e5",
+    "name": "Les gateaux de mamy",
+    "author": "Granny",
+    "description": "J'ai fait trop de tartes venez en manger les enfants",
     "dates": [
-      "2023-01-18"
+      "2023-01-26"
     ],
-    "created_at": "2023-01-06T15:18:38.350Z",
+    "created_at": "2023-01-09T07:52:52.370Z",
     "num_modification": 0,
-    "last_modification": "2023-01-06T15:18:38.350Z",
+    "last_modification": "2023-01-09T07:52:52.370Z",
     "attendees": []
+  },
+  {
+    "id": "62aade5768c7",
+    "name": "Patrick's birthday",
+    "author": "Patrick",
+    "description": "Come to my party y'all",
+    "dates": [
+      "2023-01-11"
+    ],
+    "created_at": "2023-01-06T15:22:53.905Z",
+    "num_modification": 0,
+    "last_modification": "2023-01-06T15:22:53.905Z",
+    "attendees": [
+      {
+        "name": "lljlkjlkj",
+        "dates": [
+          {
+            "date": "2023-01-11",
+            "available": false
+          }
+        ]
+      },
+      {
+        "name": "hkjhkjhk",
+        "dates": [
+          {
+            "date": "2023-01-11",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "Marie",
+        "dates": [
+          {
+            "date": "2023-01-11",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "Hohoho",
+        "dates": [
+          {
+            "date": "2023-01-11",
+            "available": false
+          }
+        ]
+      },
+      {
+        "name": "Georginette",
+        "dates": [
+          {
+            "date": "2023-01-11",
+            "available": true
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "e0ca28dc0fcf",
@@ -36,7 +95,26 @@
     "created_at": "2023-01-06T15:17:47.174Z",
     "num_modification": 0,
     "last_modification": "2023-01-06T15:17:47.174Z",
-    "attendees": []
+    "attendees": [
+      {
+        "name": "Patrick",
+        "dates": [
+          {
+            "date": "2023-01-25",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "Pol",
+        "dates": [
+          {
+            "date": "2023-01-25",
+            "available": true
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "88ab6c541768",
@@ -87,6 +165,51 @@
             "date": "2022-03-17",
             "available": false
           },
+          {
+            "date": "2022-03-21",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "Johnny",
+        "dates": [
+          {
+            "date": "2022-03-18",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "Michèle",
+        "dates": [
+          {
+            "date": "2022-03-17",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "Marianne",
+        "dates": [
+          {
+            "date": "2022-03-17",
+            "available": false
+          }
+        ]
+      },
+      {
+        "name": "Nana",
+        "dates": [
+          {
+            "date": "2022-03-22",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "Georginette",
+        "dates": [
           {
             "date": "2022-03-21",
             "available": true
