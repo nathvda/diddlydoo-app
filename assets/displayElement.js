@@ -2,6 +2,7 @@ import deleteElement from "./deleteElement.js";
 import editModeToggle from "./editModeToggle.js";
 import addAvailable from "./addAvailability.js";
 import findBestPossibleDate from "./findBestPossibleDate.js";
+import checkboxUnavailable from "./checkboxUnavailable.js";
 
 export default function generateElement(event, id, descr, auteur, dates) {
   const wrapper = document.getElementById("event__wrapper");
@@ -40,7 +41,6 @@ export default function generateElement(event, id, descr, auteur, dates) {
   let bestDateValue;
   findBestPossibleDate(id).then((value) => {
     bestDateValue = value;
-    console.log(bestDateValue);
     const bestDateText = document.createTextNode(`${bestDateValue}`);
     bestDate.appendChild(bestDateText);
   });
@@ -98,10 +98,19 @@ export default function generateElement(event, id, descr, auteur, dates) {
 
       attend.setAttribute("type", "checkbox");
 
+      attend.addEventListener("change", () => {
+
+        checkboxUnavailable(id, dates[i].date, dates[i].attendees[j].name, attend.checked);
+
+      })
+
       if (dates[i].attendees[j].available === true) {
+        attend.classList.add("event__card__attendee--available");
         attend.checked = true;
       } else {
+        attend.classList.add("event__card__attendee--unavailable");
         attend.checked = false;
+
       }
       attend.classList.add("event__card__disponibility");
       attendeeList.appendChild(attendName);
@@ -120,19 +129,30 @@ export default function generateElement(event, id, descr, auteur, dates) {
   //addAvailability.appendChild(addAvailabilityText);
   divAttendees.appendChild(addAvailability);
 
-  titre.addEventListener('click', (e) => {
+  
     let tailleEcran = window.matchMedia('(min-width:1024px)');
     if (!tailleEcran.matches){
-      if (divAttendees.classList.contains('displayNone')){
+
+      titre.addEventListener('click', (e) => { 
+
+        if (divAttendees.classList.contains('displayNone')){
         divAttendees.classList.replace('displayNone', 'displayBlock');
         divAttendees.style.display= 'block';
       }
+
       else {
         divAttendees.classList.replace('displayBlock', 'displayNone');
         divAttendees.style.display= 'none';
     }
-    }
+
   })
+
+    } else {
+      divAttendees.classList.replace('displayNone', 'displayBlock');
+      divAttendees.style.display= 'block';
+      divAttendees.style.display= 'block';
+    }
+  
 
   const divButton = document.createElement('div');
   divButton.classList.add('event__card__button');

@@ -54,7 +54,14 @@ export default function addAvailable(id, dates) {
     const availableChosen = selectAvailability.selectedIndex;
     const availableChosenOption =
       selectAvailability.querySelectorAll("option")[availableChosen];
-    const availableChosenValue = availableChosenOption.value;
+    let availableChosenValue = availableChosenOption.value;
+
+    if (availableChosenValue === "true") { 
+      availableChosenValue = true; 
+    } else {
+      availableChosenValue = false;
+    }
+
     console.log(availableChosenValue);
 
     console.log(availableboxInput.value);

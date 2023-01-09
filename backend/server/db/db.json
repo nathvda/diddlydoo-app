@@ -1,89 +1,116 @@
 [
   {
-    "id": "ac633dc27861",
-    "name": "vvv",
-    "author": "nnnn",
-    "description": "fgnfgn",
+    "id": "5e61e0e489b4",
+    "name": "La soirée Tupperware de Martine",
+    "author": "Martine",
+    "description": "Venez dépenser vos sous parce que vous aimez votre amie, merci !",
     "dates": [
-      "2023-01-10",
-      "2023-01-17",
-      "2023-01-18",
+      "2023-04-14",
+      "2023-01-28",
+      "2023-01-31"
+    ],
+    "created_at": "2023-01-09T09:52:02.406Z",
+    "num_modification": 0,
+    "last_modification": "2023-01-09T09:52:02.406Z",
+    "attendees": [
+      {
+        "name": "Jonas",
+        "dates": [
+          {
+            "date": "2023-04-14",
+            "available": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "e10fb806da7c",
+    "name": "Marilyn",
+    "author": "Hqdsklj",
+    "description": "On sait pas trop mais ça sera cool",
+    "dates": [
+      "2023-01-04",
+      "2023-01-25",
+      "2023-01-02",
+      "2023-01-30"
+    ],
+    "created_at": "2023-01-09T09:37:21.675Z",
+    "num_modification": 0,
+    "last_modification": "2023-01-09T09:37:21.675Z",
+    "attendees": []
+  },
+  {
+    "id": "c11b7fa754e5",
+    "name": "Les gateaux de mamy",
+    "author": "Granny",
+    "description": "J'ai fait trop de tartes venez en manger les enfants",
+    "dates": [
+      "2023-01-26"
+    ],
+    "created_at": "2023-01-09T07:52:52.370Z",
+    "num_modification": 0,
+    "last_modification": "2023-01-09T07:52:52.370Z",
+    "attendees": []
+  },
+  {
+    "id": "62aade5768c7",
+    "name": "Patrick's birthday",
+    "author": "Patrick",
+    "description": "Come to my party y'all",
+    "dates": [
       "2023-01-11"
     ],
-    "created_at": "2023-01-09T08:10:47.556Z",
+    "created_at": "2023-01-06T15:22:53.905Z",
     "num_modification": 0,
-    "last_modification": "2023-01-09T08:10:47.556Z",
-    "attendees": []
-  },
-  {
-    "id": "81fe769809cd",
-    "name": "hhrdth",
-    "author": "hreth",
-    "description": "rtjurety",
-    "dates": [
-      "2023-01-11",
-      "2023-01-03",
-      "2023-01-18",
-      "2023-01-17",
-      "2023-01-17",
-      "2023-01-17"
-    ],
-    "created_at": "2023-01-09T08:07:30.369Z",
-    "num_modification": 0,
-    "last_modification": "2023-01-09T08:07:30.369Z",
-    "attendees": []
-  },
-  {
-    "id": "bc3e7a942e84",
-    "name": "hhhhhh",
-    "author": "hsdhsdh",
-    "description": "hhhhh",
-    "dates": [
-      "2023-01-18"
-    ],
-    "created_at": "2023-01-09T08:03:44.720Z",
-    "num_modification": 0,
-    "last_modification": "2023-01-09T08:03:44.720Z",
-    "attendees": []
-  },
-  {
-    "id": "6283d89cdbf2",
-    "name": "fffff",
-    "author": "hhhhhh",
-    "description": "ttttttt",
-    "dates": [
-      "2023-01-24"
-    ],
-    "created_at": "2023-01-09T08:00:20.914Z",
-    "num_modification": 0,
-    "last_modification": "2023-01-09T08:00:20.914Z",
-    "attendees": []
-  },
-  {
-    "id": "73a0c98d8b24",
-    "name": "Soirée jeux",
-    "author": "Moi",
-    "description": "Bla bla bla",
-    "dates": [
-      "2023-01-18"
-    ],
-    "created_at": "2023-01-09T07:39:33.309Z",
-    "num_modification": 0,
-    "last_modification": "2023-01-09T07:39:33.309Z",
-    "attendees": []
-  },
-  {
-    "id": "08865b6a55e0",
-    "name": "ghfgh",
-    "author": "fghfdh",
-    "description": "dfghdfh",
-    "dates": [
-      "2023-01-18"
-    ],
-    "created_at": "2023-01-06T15:18:38.350Z",
-    "num_modification": 0,
-    "last_modification": "2023-01-06T15:18:38.350Z",
-    "attendees": []
+    "last_modification": "2023-01-06T15:22:53.905Z",
+    "attendees": [
+      {
+        "name": "lljlkjlkj",
+        "dates": [
+          {
+            "date": "2023-01-11",
+            "available": false
+          }
+        ]
+      },
+      {
+        "name": "hkjhkjhk",
+        "dates": [
+          {
+            "date": "2023-01-11",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "Marie",
+        "dates": [
+          {
+            "date": "2023-01-11",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "Hohoho",
+        "dates": [
+          {
+            "date": "2023-01-11",
+            "available": false
+          }
+        ]
+      },
+      {
+        "name": "Georginette",
+        "dates": [
+          {
+            "date": "2023-01-11",
+            "available": true
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "e0ca28dc0fcf",
@@ -109,7 +136,26 @@
     "created_at": "2023-01-06T15:17:47.174Z",
     "num_modification": 0,
     "last_modification": "2023-01-06T15:17:47.174Z",
-    "attendees": []
+    "attendees": [
+      {
+        "name": "Patrick",
+        "dates": [
+          {
+            "date": "2023-01-25",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "Pol",
+        "dates": [
+          {
+            "date": "2023-01-25",
+            "available": true
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "88ab6c541768",
@@ -140,14 +186,6 @@
         "name": "Michou",
         "dates": [
           {
-            "date": "2022-03-17",
-            "available": true
-          },
-          {
-            "date": "2022-03-18",
-            "available": false
-          },
-          {
             "date": "2022-03-21",
             "available": true
           }
@@ -162,6 +200,60 @@
           },
           {
             "date": "2022-03-21",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "Johnny",
+        "dates": [
+          {
+            "date": "2022-03-21",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "Michèle",
+        "dates": [
+          {
+            "date": "2022-03-21",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "Marianne",
+        "dates": [
+          {
+            "date": "2022-03-22",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "Nana",
+        "dates": [
+          {
+            "date": "2022-03-21",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "Georginette",
+        "dates": [
+          {
+            "date": "2022-03-21",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "jjjjj",
+        "dates": [
+          {
+            "date": "2022-03-22",
             "available": true
           }
         ]
