@@ -102,9 +102,12 @@ export default function generateElement(event, id, descr, auteur, dates) {
       })
 
       if (dates[i].attendees[j].available === true) {
+        attend.classList.add("event__card__attendee--available");
         attend.checked = true;
       } else {
+        attend.classList.add("event__card__attendee--unavailable");
         attend.checked = false;
+
       }
       attend.classList.add("event__card__attendee");
       attendeeList.appendChild(attendName);

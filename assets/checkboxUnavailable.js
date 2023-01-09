@@ -1,3 +1,5 @@
+
+
 export default async function checkboxUnavailable (id, date, name, available) {
     try {
       await fetch(`http://localhost:3000/api/events/${id}/attend`, {

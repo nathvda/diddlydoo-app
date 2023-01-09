@@ -1,5 +1,30 @@
 [
   {
+    "id": "5e61e0e489b4",
+    "name": "La soirée Tupperware de Martine",
+    "author": "Martine",
+    "description": "Venez dépenser vos sous parce que vous aimez votre amie, merci !",
+    "dates": [
+      "2023-04-14",
+      "2023-01-28",
+      "2023-01-31"
+    ],
+    "created_at": "2023-01-09T09:52:02.406Z",
+    "num_modification": 0,
+    "last_modification": "2023-01-09T09:52:02.406Z",
+    "attendees": [
+      {
+        "name": "Jonas",
+        "dates": [
+          {
+            "date": "2023-04-14",
+            "available": true
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "e10fb806da7c",
     "name": "Marilyn",
     "author": "Hqdsklj",
@@ -192,7 +217,7 @@
         "name": "Michèle",
         "dates": [
           {
-            "date": "2022-03-17",
+            "date": "2022-03-21",
             "available": true
           }
         ]
@@ -210,8 +235,8 @@
         "name": "Nana",
         "dates": [
           {
-            "date": "2022-03-22",
-            "available": false
+            "date": "2022-03-21",
+            "available": true
           }
         ]
       },
@@ -219,7 +244,7 @@
         "name": "Georginette",
         "dates": [
           {
-            "date": "2022-03-22",
+            "date": "2022-03-21",
             "available": true
           }
         ]
