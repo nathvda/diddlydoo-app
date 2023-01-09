@@ -23,6 +23,10 @@ $lightBlue : #cacbd5;
     list-style-type: none;
 }
 
+body {
+    background-image: url(./images/didlydoo-app-fondécran-petit.webp);
+    background-size: contain;
+}
 //mise en page du header
 .header {
     &__images {
@@ -57,7 +61,7 @@ $lightBlue : #cacbd5;
 main {
     .addEvent {
         display: flex;
-        display: none;
+        //display: none;
     }
 }
 
@@ -137,10 +141,12 @@ main {
                 height: 10vw;
                 border-style: none;
                 background-color: $lightBlue;
+                margin: 5% 0% 5% 0%;
             }
             &--delete {
                 @extend .event__card__button--edit;
                 background-image: url(./images/didlydoo-app-supprimer.webp);
+                margin-right: 5%;
             }
         }
     }
