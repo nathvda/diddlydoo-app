@@ -122,8 +122,9 @@ export default function generateElement(event, id, descr, auteur, dates) {
   const addAvailability = document.createElement("button");
   const addAvailabilityText = document.createTextNode("+");
   addAvailability.classList.add("event__card__button--addDates");
-
+  let formTriggered = 0;
   addAvailability.addEventListener("click", () => {
+
     addAvailable(id, dates);
   });
   //addAvailability.appendChild(addAvailabilityText);

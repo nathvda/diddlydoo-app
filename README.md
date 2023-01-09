@@ -15,7 +15,7 @@ The backend is not a part of this project, because it was already written before
 Please, have a tour on the repository. 
 
 Known Issues : 
-- Impossible to check more than one date at a time.
+- Possible to check more than one date at a time, but the date must already appeared in the json file. If it does not, it won't be updated.
 
 Team :
 Nour Everaert,

@@ -1,21 +1,22 @@
 export default async function checkboxUnavailable(id, date, name, available) {
   try {
-    let woop;
+    let fullObj;
 
     await fetch(`http://localhost:3000/api/events/${id}`, {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     })
       .then((res) => res.json())
-      .then((data) => (woop = data));
+      .then((data) => (fullObj = data));
 
-    console.log(woop.dates);
+    console.log(fullObj.dates);
+    console.log(fullObj.attendees);
 
-    console.log(woop);
+    
 
     let infos = [];
 
-    for (let elem of woop.dates) {
+    for (let elem of fullObj.dates) {
       for (let att of elem.attendees) {
         if (att.name === name) {
           if (elem.date === date) {

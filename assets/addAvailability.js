@@ -1,6 +1,9 @@
 import editAvailability from "./editAvailability.js";
 
+let formTriggered = 0;
 export default function addAvailable(id, dates) {
+
+
   const availablebox = document.createElement("div");
   availablebox.classList.add("event__card__available--menu");
 
@@ -46,6 +49,8 @@ export default function addAvailable(id, dates) {
   const addAvailabilityButtonText = document.createTextNode("Add");
 
   addAvailabilityButton.addEventListener("click", () => {
+
+    
     const dateChosen = selectDate.selectedIndex;
     const dateChosenOption = selectDate.querySelectorAll("option")[dateChosen];
     const dateChosenValue = dateChosenOption.value;
@@ -77,15 +82,26 @@ export default function addAvailable(id, dates) {
         availableboxInput.value,
         availableChosenValue
       );
+      formTriggered = 0;
     }
-  });
+  } );
 
+if (formTriggered === 0){
+  formTriggered = 1;
   addAvailabilityButton.appendChild(addAvailabilityButtonText);
 
   document.getElementById(id).appendChild(availablebox);
+
+
   availablebox.appendChild(availableboxLabel);
   availablebox.appendChild(availableboxInput);
   availablebox.appendChild(selectDate);
   availablebox.appendChild(selectAvailability);
   availablebox.appendChild(addAvailabilityButton);
+ } else { 
+    console.log("continued");
+  }
+
+  
+
 }
