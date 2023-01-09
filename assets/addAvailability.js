@@ -63,6 +63,8 @@ export default function addAvailable(id, dates) {
 
     if (availableboxInput.value === "") {
       alert("Name must be filled");
+    } else if (availableboxInput.value.length > 256){
+      alert("The name must be shorter than 256 characters");
     } else {
       editAvailability(
         id,

@@ -32,7 +32,7 @@ export default function editModeToggle(id, parent) {
   authorModif.classList.add("event__card__author-editMode");
   console.log(authorModif);
 
-  elem.replaceChild(authorModif, author);
+  elem.querySelector(".event__card__divAuthorDate").replaceChild(authorModif, author);
 
   const buttonEdit = document.createElement("button");
   const buttonEditText = document.createTextNode("Valider les changements");
@@ -40,6 +40,24 @@ export default function editModeToggle(id, parent) {
   elem.appendChild(buttonEdit);
 
   buttonEdit.addEventListener("click", () => {
+    if (titreModif.value !== "" &&
+     titreModif.value.length < 256 && 
+     descriModif.value !== "" &&
+      descriModif.value.length < 256 && 
+      authorModif.value !== "" &&
+      authorModif.value.length < 256 ){
+
     editElement(id, titreModif.value, descriModif.value, authorModif.value);
+    } else if (titreModif.value === "" ||
+    descriModif.value === "" ||
+    authorModif.value === ""
+    ){
+      alert("All fields must be filled.");
+    } else if (titreModif.value.length > 256 ||
+      descriModif.value.length > 256 ||
+      authorModif.value.length > 256 
+    ) { 
+      alert("All fields must be shorter than 256 characters.");
+    }
   });
 }
