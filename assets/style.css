@@ -38,6 +38,7 @@ body {
 
 main .addEvent {
   display: flex;
+  display: none;
 }
 
 #event__wrapper {
@@ -106,16 +107,53 @@ main .addEvent {
   color: #cacbd5;
   background-color: #3d4251;
   margin-left: 30%;
+  margin-bottom: 7vw;
   padding: 5% 2%;
   width: 30vw;
   border-radius: 5vw;
 }
 #event__wrapper .event__card__divAttendees {
-  display: none;
+  background-color: white;
+  width: 90%;
+  margin-left: 5%;
+  border-radius: 5vw;
+  padding: 2vw;
+}
+#event__wrapper .event__card__array {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 0.5vw solid #d35e35;
+  margin-top: 1vw;
+  align-items: center;
+}
+#event__wrapper .event__card__date {
+  font-family: "Kodchasan", sans-serif;
+  font-size: 4vw;
+  font-weight: 400;
+  width: 32vw;
+  border-right: 0.5vw solid #d35e35;
+}
+#event__wrapper .event__card__listAttendees {
+  margin-left: 5vw;
+  margin-bottom: 2vw;
+  width: 32vw;
+  font-family: "Kodchasan", sans-serif;
+  font-size: 4vw;
+  font-weight: 400;
 }
 #event__wrapper .event__card__button {
   display: flex;
   justify-content: end;
+}
+#event__wrapper .event__card__button--addDates {
+  background-image: url(./images/didlydoo-app-ajouter.webp);
+  background-size: cover;
+  width: 8vw;
+  height: 8vw;
+  border-style: none;
+  background-color: white;
+  margin: 1vw;
 }
 #event__wrapper .event__card__button--edit, #event__wrapper .event__card__button--delete {
   background-image: url(./images/didlydoo-app-édition.webp);
@@ -129,6 +167,15 @@ main .addEvent {
 #event__wrapper .event__card__button--delete {
   background-image: url(./images/didlydoo-app-supprimer.webp);
   margin-right: 5%;
+}
+#event__wrapper .event__card__available--menu {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  background-color: #3d4251;
+}
+#event__wrapper .event__card__available--label {
+  color: #cacbd5;
 }
 
 @media screen and (min-width: 1024px) {
