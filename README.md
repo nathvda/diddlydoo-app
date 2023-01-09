@@ -16,3 +16,9 @@ Please, have a tour on the repository.
 
 Known Issues : 
 - Impossible to check more than one date at a time.
+
+Team :
+Nour Everaert,
+Nathalie Vanden Abeele,
+Edouard de Romrée de Vichenet,
+Virginie Dourson.
