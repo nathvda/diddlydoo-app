@@ -107,7 +107,7 @@ main .addEvent {
   background-color: #3d4251;
   margin-left: 30%;
   padding: 5% 2%;
-  width: 40%;
+  width: 30vw;
   border-radius: 5vw;
 }
 #event__wrapper .event__card__divAttendees {
@@ -129,4 +129,26 @@ main .addEvent {
 #event__wrapper .event__card__button--delete {
   background-image: url(./images/didlydoo-app-supprimer.webp);
   margin-right: 5%;
+}
+
+@media screen and (min-width: 1024px) {
+  .event__card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+  }
+  .event__card h4 {
+    margin-right: 30%;
+  }
+  .event__card h3 {
+    font-size: 28px;
+  }
+  #event__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }/*# sourceMappingURL=style.css.map */

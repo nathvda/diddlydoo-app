@@ -125,7 +125,7 @@ main {
             background-color: $darkBlue;
             margin-left: 30%;
             padding: 5% 2%;
-            width: 40%;
+            width: 30vw;
             border-radius: 5vw;
         }
         &__divAttendees {
@@ -157,12 +157,16 @@ main {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        width: 35%;
+        width: 25%;
         justify-content: center;
         align-items: center;
 
         h4{
            margin-right: 30%;
+        }
+
+        h3{
+            font-size: 28px;
         }
     }
     #event__wrapper{
@@ -170,5 +174,7 @@ main {
         flex-direction: row;
         flex-wrap: wrap;
     }
+
+
     
 }
