@@ -9,7 +9,11 @@ export default async function checkboxUnavailable(id, date, name, available) {
       .then((res) => res.json())
       .then((data) => (woop = data));
 
-    const infos = [];
+    console.log(woop.dates);
+
+    console.log(woop);
+
+    let infos = [];
 
     for (let elem of woop.dates) {
       for (let att of elem.attendees) {
@@ -24,15 +28,15 @@ export default async function checkboxUnavailable(id, date, name, available) {
           console.log(obj);
           infos.push(obj);
           }
+          
+          console.log(infos);
         }
       }
     }
 
-    console.log(infos);
-
     await fetch(`http://localhost:3000/api/events/${id}/attend`, {
           method: 'PATCH',
-          headers: { 'Content-Type': 'application-json' },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             name: name,
             dates: infos
