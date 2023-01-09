@@ -38,7 +38,6 @@ body {
 
 main .addEvent {
   display: flex;
-  display: none;
 }
 
 #event__wrapper {
