@@ -62,6 +62,7 @@ export default function generateElement(event, id, descr, auteur, dates) {
 
   const divAttendees = document.createElement('div');
   divAttendees.classList.add('event__card__divAttendees');
+  divAttendees.classList.add('displayNone');
   element.appendChild(divAttendees);
 
   const arrayAttendees = document.createElement("div");
@@ -115,6 +116,20 @@ export default function generateElement(event, id, descr, auteur, dates) {
   });
   addAvailability.appendChild(addAvailabilityText);
   divAttendees.appendChild(addAvailability);
+
+  titre.addEventListener('click', (e) => {
+    let tailleEcran = window.matchMedia('(min-width:1024px)');
+    if (!tailleEcran.matches){
+      if (divAttendees.classList.contains('displayNone')){
+        divAttendees.classList.replace('displayNone', 'displayBlock');
+        divAttendees.style.display= 'block';
+      }
+      else {
+        divAttendees.classList.replace('displayBlock', 'displayNone');
+        divAttendees.style.display= 'none';
+    }
+    }
+  })
 
   const divButton = document.createElement('div');
   divButton.classList.add('event__card__button');

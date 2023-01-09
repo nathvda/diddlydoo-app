@@ -9,3 +9,4 @@ window.addEventListener("load", readElement);
 
 let myForm = document.getElementById("myform");
 myForm.addEventListener("submit", validateInput);
+

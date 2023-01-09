@@ -7,6 +7,11 @@
   list-style-type: none;
 }
 
+body {
+  background-image: url(./images/didlydoo-app-fondécran-petit.webp);
+  background-size: contain;
+}
+
 .header__images {
   display: flex;
   align-items: center;
@@ -120,7 +125,9 @@ main .addEvent {
   height: 10vw;
   border-style: none;
   background-color: #cacbd5;
+  margin: 5% 0% 5% 0%;
 }
 #event__wrapper .event__card__button--delete {
   background-image: url(./images/didlydoo-app-supprimer.webp);
+  margin-right: 5%;
 }/*# sourceMappingURL=style.css.map */
