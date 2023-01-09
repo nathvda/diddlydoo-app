@@ -61,7 +61,7 @@ body {
 main {
     .addEvent {
         display: flex;
-        //display: none;
+        display: none;
     }
 }
 
@@ -124,16 +124,50 @@ main {
             color: $lightBlue;
             background-color: $darkBlue;
             margin-left: 30%;
+            margin-bottom: 7vw;
             padding: 5% 2%;
             width: 40%;
             border-radius: 5vw;
         }
         &__divAttendees {
-            display: none;
+            //display: none;
+            background-color: white;
+            width: 90%;
+            margin-left: 5%;
+            border-radius: 5vw;
+            padding: 2vw;
+        }
+        &__array {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            border-bottom: 0.5vw solid $orange;
+            margin-top: 1vw;
+            align-items: center;
+        }
+        &__date {
+            @include fonts(4vw, 400);
+            width: 32vw;
+            border-right: 0.5vw solid $orange;
+        }
+        &__listAttendees{
+            margin-left: 5vw;
+            margin-bottom: 2vw;
+            width: 32vw;
+            @include fonts(4vw, 400);
         }
         &__button {
             display: flex;
             justify-content: end;
+            &--addDates {
+                background-image: url(./images/didlydoo-app-ajouter.webp);
+                background-size: cover;
+                width: 8vw;
+                height: 8vw;
+                border-style: none;
+                background-color: white;
+                margin: 1vw;
+            }
             &--edit {
                 background-image: url(./images/didlydoo-app-édition.webp);
                 background-size: cover;
@@ -149,6 +183,18 @@ main {
                 margin-right: 5%;
             }
         }
+        &__available {
+            &--menu {
+                display: flex;
+                flex-wrap: wrap;
+                width: 50%;
+                background-color: $darkBlue;
+            }
+            &--label {
+                color: $lightBlue;
+            }
+        }
     }
 
 }
+
