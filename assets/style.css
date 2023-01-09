@@ -225,7 +225,7 @@ main .addEvent {
   display: flex;
   margin-top: 3vw;
   font-family: "Kodchasan", sans-serif;
-  font-size: 16px;
+  font-size: 5vw;
   font-weight: 200;
   color: white;
   text-align: center;
@@ -234,6 +234,7 @@ main .addEvent {
 
 .input_name, .input_author {
   width: 30vw;
+  height: 7vw;
 }
 
 .input_description {
@@ -247,7 +248,7 @@ main .addEvent {
 
 label {
   font-family: "Kodchasan", sans-serif;
-  font-size: 20px;
+  font-size: 5.5vw;
   font-weight: 400;
 }
 
@@ -277,18 +278,26 @@ label {
 }
 
 #addDate {
-  border-radius: 50px;
+  border-radius: 2vw;
   padding: 2vw;
   background-color: #3d4251;
   color: #cacbd5;
+  font-family: "Kodchasan", sans-serif;
+  font-size: 4vw;
+  font-weight: 400;
+  border-style: none;
 }
 
 #create {
-  border-radius: 50px;
+  border-radius: 2vw;
   padding: 2vw;
   width: 25vw;
   background-color: #d35e35;
   color: #cacbd5;
+  font-family: "Kodchasan", sans-serif;
+  font-size: 4vw;
+  font-weight: 400;
+  border-style: none;
 }
 
 .footer {
@@ -454,6 +463,54 @@ label {
   }
   #event__wrapper .event__card__available--button {
     width: 5vw;
+  }
+  .input_name, .input_author, .input_description, .dates {
+    margin-top: 1.5vw;
+    font-family: "Kodchasan", sans-serif;
+    font-size: 2vw;
+    font-weight: 200;
+    margin-bottom: 0vw;
+  }
+  .input_name, .input_author {
+    width: 10vw;
+    height: 3vw;
+  }
+  .input_description {
+    width: 40vw;
+    margin-bottom: 2vw;
+  }
+  .dates {
+    height: 7vw;
+    width: 15vw;
+  }
+  label {
+    font-family: "Kodchasan", sans-serif;
+    font-size: 2vw;
+    font-weight: 400;
+  }
+  .form__nameauthor {
+    margin-top: 5vw;
+  }
+  #addDate {
+    border-radius: 2vw;
+    padding: 1vw;
+    background-color: #3d4251;
+    color: #cacbd5;
+    font-family: "Kodchasan", sans-serif;
+    font-size: 1.5vw;
+    font-weight: 400;
+    border-style: none;
+  }
+  #create {
+    border-radius: 2vw;
+    padding: 1vw;
+    width: 10vw;
+    background-color: #d35e35;
+    color: #cacbd5;
+    font-family: "Kodchasan", sans-serif;
+    font-size: 1.5vw;
+    font-weight: 400;
+    border-style: none;
   }
   .footer {
     background-color: #cacbd5;
