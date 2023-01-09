@@ -285,15 +285,24 @@ label{
     flex-direction: row;
     justify-content: space-around;
 }
-
 #addDate{
+    border-radius: 50px;
+    padding: 2vw;
+    background-color: $darkBlue; 
+    color: $lightBlue;
+}
+#create{
+    border-radius: 50px;
+    padding: 2vw;
+    width: 25vw;
+    background-color: $orange;
+    color:$lightBlue
     
 }
 // footer
 footer{
     background-color: $lightBlue;
-
-
+    
     .termsPrivacy
     {
     text-align: center;

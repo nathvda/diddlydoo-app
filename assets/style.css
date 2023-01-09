@@ -273,6 +273,21 @@ label {
   justify-content: space-around;
 }
 
+#addDate {
+  border-radius: 50px;
+  padding: 2vw;
+  background-color: #3d4251;
+  color: #cacbd5;
+}
+
+#create {
+  border-radius: 50px;
+  padding: 2vw;
+  width: 25vw;
+  background-color: #d35e35;
+  color: #cacbd5;
+}
+
 footer {
   background-color: #cacbd5;
 }
