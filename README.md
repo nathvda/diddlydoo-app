@@ -22,3 +22,8 @@ Nour Everaert,
 Nathalie Vanden Abeele,
 Edouard de Romrée de Vichenet,
 Virginie Dourson.
+
+## Aperçu
+
+![didlydoo-app-aperçu-desktop](https://user-images.githubusercontent.com/117478874/211346807-bd7bf1c8-2dab-4909-beef-7d11ee7b0971.png)
+![didlydoo-app-aperçu-mobile](https://user-images.githubusercontent.com/117478874/211346813-2c3f4d3c-5d69-496e-b938-6b2f7e8603ea.png)
