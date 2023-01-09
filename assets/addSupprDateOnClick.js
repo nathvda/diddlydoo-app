@@ -10,14 +10,15 @@ export default function addDateOnClick(e){
     newDate.setAttribute('class', 'dates');
     newDate.setAttribute('id', 'date2');
     minusButton.setAttribute('id', 'suppDate');
-    minusButton.textContent = 'Supress';
-    document.querySelector('.form__dates').appendChild(newDate);
-    // form.insertBefore(divError, e.target);
-    // form.insertBefore(minusButton, e.target);
-    // minusButton.addEventListener('click', (el) => {
-    //     el.preventDefault();
-    //     form.removeChild(newDate);
-    //     form.removeChild(divError);
-    //     form.removeChild(minusButton);
-    // })
+    minusButton.textContent = 'Suppress';
+    let formDates = document.querySelector('.form__dates')
+    formDates.appendChild(newDate);
+    formDates.appendChild(divError);
+    formDates.appendChild(minusButton);
+    minusButton.addEventListener('click', (el) => {
+        el.preventDefault();
+        formDates.removeChild(newDate);
+        formDates.removeChild(divError);
+        formDates.removeChild(minusButton);
+    })
 }
